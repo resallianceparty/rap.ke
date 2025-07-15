@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAP Ideology</title>
+  <link rel="stylesheet" href="styles/rap.css" />
+</head>
+<body>
+  <!-- Include reusable header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo-area">
+        <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
+        
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ideology.html">Ideology</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="resource-centre.html">Resource Centre</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="news.html">News & Updates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav"></div>
+
+        <!-- Drop Animation Background -->
+        <div class="drip-background">
+          <div class="drip drip1"></div>
+          <div class="drip drip2"></div>
+          <div class="drip drip4"></div>
+          <div class="drip drip5"></div>
+        </div>
+
+  </header>
+  
+  <div class="page-wrapper animate-home"> <!-- animate-home changes per page -->
+    <!-- Your header + content + footer -->
+  </div>
+
+  <main class="section">
+    <div class="content">
+      <h1>Our Ideology</h1>
+
+      <p><strong>Sustainable Centrism</strong> is RAP’s unique political and governance ideology. It balances responsible economic growth, social inclusion, justice, and environmental care to ensure long-term national sustainability.</p>
+
+      <p>It is about building a political and governance culture that centers on:</p>
+      <ul>
+        <li><strong>Balanced development:</strong> Not extreme left or right policies, but strategic, inclusive decisions.</li>
+        <li><strong>Opportunity for all:</strong> Creating structures and systems that serve every Kenyan regardless of origin.</li>
+        <li><strong>Progressive unity:</strong> Encouraging togetherness across all diversities—ethnic, social, generational.</li>
+      </ul>
+
+      <h2>Why Sustainable Centrism?</h2>
+      <p>Because Kenya’s current governance model has polarized and marginalized communities. Sustainable Centrism bridges the gap by being:</p>
+      <ul>
+        <li>Issue-based rather than tribal or personality-based</li>
+        <li>Action-oriented rather than promise-heavy</li>
+        <li>Future-focused rather than reactive</li>
+      </ul>
+
+      <p class="note">[CMS Placeholder: This section can be dynamically updated with videos, articles, and quotes from RAP leadership.]</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
+      <p>Email: info@rap.or.ke | Phone: +254XXXXXX</p>
+      <p>Follow Us: X, Facebook, LinkedIn, TikTok</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

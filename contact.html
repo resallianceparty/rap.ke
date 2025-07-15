@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - RAP</title>
+  <link rel="stylesheet" href="styles/rap.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header full-centered">
+    <div class="container">
+      <div class="logo-area">
+        <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
+        
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ideology.html">Ideology</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="resource-centre.html">Resource Centre</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="news.html">News & Updates</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <div class="mobile-nav" id="mobileNav"></div>
+    </div>
+
+            <!-- Drop Animation Background -->
+            <div class="drip-background">
+              <div class="drip drip1"></div>
+              <div class="drip drip2"></div>
+              <div class="drip drip4"></div>
+              <div class="drip drip5"></div>
+            </div>
+
+  </header>
+
+  <div class="page-wrapper animate-home"> <!-- animate-home changes per page -->
+    <!-- Your header + content + footer -->
+  </div>
+
+  <!-- Contact Form -->
+  <main class="section">
+    <div class="content">
+      <h1>Contact Us</h1>
+      <p>We would love to hear from you. Whether you have a question, feedback, or want to collaborate — just reach out below.</p>
+
+      <form action="#" method="POST" class="contact-form">
+        <label for="name">Your Name *</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email *</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Your Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+
+      <p class="note">[This form can be connected to Formspree, backend API, or CMS form handler]</p>
+
+      <section class="resource-section">
+        <h2>Contact Details</h2>
+        <p><strong>Location:</strong> Kose Heights, 2nd Floor, Suite No. F2.5, Argwings Kodhek Road, Kilimani, Nairobi</p>
+        <p><strong>Email:</strong> info@rap.or.ke</p>
+        <p><strong>Phone:</strong> +254XXXXXXX</p>
+      </section>
+
+      <section class="resource-section">
+        <h2>Follow Us On</h2>
+        <ul class="notice-list">
+          <li>X (Twitter)</li>
+          <li>Facebook</li>
+          <li>LinkedIn</li>
+          <li>TikTok</li>
+        </ul>
+      </section>
+    </div>
+</body>
+</html>

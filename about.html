@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About RAP</title>
+  <link rel="stylesheet" href="styles/rap.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <div class="logo-area">
+            <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
+            
+          </div>
+          <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="ideology.html">Ideology</a>
+            <a href="manifesto.html">Manifesto</a>
+            <a href="resource-centre.html">Resource Centre</a>
+            <a href="get-involved.html">Get Involved</a>
+            <a href="news.html">News & Updates</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav"></div>
+        
+            <!-- Drop Animation Background -->
+    <div class="drip-background">
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip4"></div>
+      <div class="drip drip5"></div>
+    </div>
+
+      </header>
+      
+      <div class="page-wrapper animate-home"> <!-- animate-home changes per page -->
+        <!-- Your header + content + footer -->
+      </div>
+
+  <main class="section">
+    <div class="content">
+      <h1>About RAP</h1>
+      <p>The Restoration Alliance Party (RAP) is a political movement rooted in the ideology of Sustainable Centrism. It was established in 2023 with a mission to restore hope and usher in a transformative era of governance in Kenya.</p>
+
+      <h2>Vision</h2>
+      <p>A Transformed Kenya – the Nation of Opportunities</p>
+
+      <h2>Mission</h2>
+      <p>To restore hope and deliver people-centered governance that is transformative, equitable, inclusive and sustainable.</p>
+
+      <h2>Founding</h2>
+      <ul>
+        <li>Founded: February 2023</li>
+        <li>Party Symbol: Spectacles</li>
+        <li>Party Slogan: “Mambo Sawa Sawa”</li>
+      </ul>
+
+      <h2>Core Values</h2>
+      <ul>
+        <li>Faith</li>
+        <li>Justice</li>
+        <li>Hard Work</li>
+        <li>Hope</li>
+        <li>Integrity</li>
+        <li>Stewardship</li>
+        <li>Resilience</li>
+      </ul>
+
+      <h2>Party Organs</h2>
+      <p>RAP’s structure includes the following key organs:</p>
+      <ul>
+        <li>National Delegates Congress</li>
+        <li>National Governing Council</li>
+        <li>National Executive Committee</li>
+        <li>National Secretariat</li>
+        <li>County Congress</li>
+        <li>Sub-County/Constituency Branch</li>
+        <li>Ward Branch</li>
+        <li>Party Caucuses (Women, Youth, Diaspora, Disability, etc.)</li>
+      </ul>
+
+      <p class="note">[CMS Placeholder: Replace static content with dynamic data from backend]</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
+      <p>Email: info@rap.or.ke | Phone: +254XXXXXX</p>
+      <p>Follow Us: X, Facebook, LinkedIn, TikTok</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

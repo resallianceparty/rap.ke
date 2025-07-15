@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAP - Home</title>
+  <link rel="stylesheet" href="styles/rap.css" />
+</head>
+<body class="home-page">
+
+  <!-- Header -->
+  <header class="header header-hero">
+    <div class="container header-container">
+      <div class="logo-area">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="RAP Logo" class="logo-img" />
+        </a>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ideology.html">Ideology</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="resource-centre.html">Resource Centre</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="news.html">News & Updates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="mobile-nav" id="mobileNav"></div>
+    <!-- Drop Animation Background -->
+    <div class="drip-background">
+      <div class="drip drip1"></div>
+      <div class="drip drip2"></div>
+      <div class="drip drip4"></div>
+      <div class="drip drip5"></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero animate-home">
+    <div class="hero-content">
+      <h1>Sustainable Centrist Leadership for All</h1>
+      <p>Let’s Restore and Progressively Transform Kenya into the Nation of Opportunities!</p>
+      <div class="cta-buttons">
+        <a href="get-involved.html" class="btn-primary">Join RAP</a>
+        <a href="donate.html" class="btn-secondary">Donate</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="assets/hero-image.jpg" alt="Hopeful Citizens" />
+    </div>
+  </section>
+
+  <!-- Highlights with Image -->
+  <section class="highlights with-images">
+    <div class="highlight-card">
+      <img src="assets/community.jpg" alt="Community" />
+      <h2>Sustainable Centrism Ideology</h2>
+      <a href="ideology.html">Explore RAP Ideology →</a>
+    </div>
+    <div class="highlight-card">
+      <img src="assets/vision.jpg" alt="Vision" />
+      <h2>The Nation of Opportunities</h2>
+      <a href="manifesto.html">Explore RAP Manifesto →</a>
+    </div>
+  </section>
+
+  <!-- Design Break Section -->
+  <section class="design-break">
+    <div class="message">
+      <h2>We Are the Movement of Restoration</h2>
+      <p>Built by Kenyans, for Kenyans. United for Progress.</p>
+    </div>
+  </section>
+
+  <!-- Breaking News -->
+  <section class="breaking-news">
+    <marquee behavior="scroll" direction="left">
+      RAP Breaking News: Constitution Approved | Ideology Presented to ORPP | Provisional Registration Progress
+    </marquee>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
+      <p>Email: info@rap.or.ke | Phone: +254XXXXXX</p>
+      <div class="social-icons">
+        <a href="#">X</a>
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Toggle Script -->
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

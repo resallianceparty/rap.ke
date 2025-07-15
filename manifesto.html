@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RAP Manifesto</title>
+  <link rel="stylesheet" href="styles/rap.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo-area">
+        <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
+        
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="ideology.html">Ideology</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="resource-centre.html">Resource Centre</a>
+        <a href="get-involved.html">Get Involved</a>
+        <a href="news.html">News & Updates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
+    <div class="mobile-nav" id="mobileNav"></div>
+
+        <!-- Drop Animation Background -->
+        <div class="drip-background">
+          <div class="drip drip1"></div>
+          <div class="drip drip2"></div>
+          <div class="drip drip4"></div>
+          <div class="drip drip5"></div>
+        </div>
+
+  </header>
+
+  <div class="page-wrapper animate-home"> <!-- animate-home changes per page -->
+    <!-- Your header + content + footer -->
+  </div>
+
+  <!-- Manifesto Content -->
+  <main class="section">
+    <div class="content">
+      <h1>Our Manifesto</h1>
+      <p>The RAP Manifesto is structured around <strong>Five Pillars of Restoration and Progressive Transformation</strong> which guide our plans for Kenya’s future.</p>
+
+      <div class="pillar-grid">
+        <div class="pillar-card blue">
+          <div class="pillar-icon">1</div>
+          <h3>Creating Opportunities & Restoring Hope</h3>
+          <p>Focus on youth empowerment, education, healthcare, housing, and employment creation.</p>
+        </div>
+      
+        <div class="pillar-card gold">
+          <div class="pillar-icon">2</div>
+          <h3>Deepening Economic Growth with Agility</h3>
+          <p>Empower MSMEs, agriculture, tourism, and digital infrastructure for inclusive growth.</p>
+        </div>
+      
+        <div class="pillar-card red">
+          <div class="pillar-icon">3</div>
+          <h3>Strengthening Financial Sector Capacity</h3>
+          <p>Enable county-based economies, financial inclusion, banking reforms, and investment access.</p>
+        </div>
+      
+        <div class="pillar-card white">
+          <div class="pillar-icon">4</div>
+          <h3>Pioneering Resilience and Unity</h3>
+          <p>Strengthen national cohesion, climate action, social protection, and mental wellness.</p>
+        </div>
+      </div>
+      
+      <!-- Wrap the fifth pillar on its own row -->
+
+        <div class="pillar-card blue">
+          <div class="pillar-icon">5</div>
+          <h3>Stewardship in Governance</h3>
+          <p>Deliver transparency, justice system reforms, public service accountability, and integrity.</p>
+        </div>
+
+      
+
+      <p class="note">[CMS Placeholder: Each pillar can be dynamically rendered from the database or CMS panel]</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
+      <p>Email: info@rap.or.ke | Phone: +254XXXXXX</p>
+      <p>Follow Us: X, Facebook, LinkedIn, TikTok</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
