@@ -349,28 +349,59 @@ main, section, .content {
 .footer {
   background-color: var(--color-primary-dark);
   color: var(--color-white);
-  padding: 3rem 1rem 1rem;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  padding: 2.5rem 1rem 1rem;
+  text-align: center;
 }
 
-.footer-content {
-  max-width: 1100px;
+.footer-container {
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  align-items: center;
 }
 
 .footer h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
   color: var(--color-gold);
+  margin-bottom: 0.5rem;
 }
 
 .footer p {
+  font-size: 0.95rem;
   margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 0.3rem 0;
+}
+
+.footer-links a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--color-gold);
 }
 
 .notice-list {
@@ -448,33 +479,6 @@ body.home-page {
   padding-bottom: 2rem;
 }
 
-.drip-background {
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
-  z-index: 0;
-}
-
-.drip {
-  width: 10px;
-  height: 80px;
-  background: rgb(42, 141, 255);
-  border-radius: 20px;
-  animation: dripMove 3s infinite ease-in-out;
-}
-
-.drip:nth-child(2) { animation-delay: 0.3s; }
-.drip:nth-child(3) { animation-delay: 0.6s; }
-.drip:nth-child(4) { animation-delay: 0.9s; }
-
-@keyframes dripMove {
-  0% { transform: translateY(-20px); opacity: 0.3; }
-  50% { transform: translateY(20px); opacity: 1; }
-  100% { transform: translateY(-20px); opacity: 0.3; }
-}
-
 .hero {
   display: flex;
   align-items: center;
@@ -529,4 +533,231 @@ body.home-page {
   color: white;
   margin: 0 0.5rem;
   text-decoration: none;
+}
+
+
+.accordion-container {
+  margin-top: 2rem;
+  border-top: 2px solid #003366;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-toggle {
+  background: #003366;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+}
+
+.accordion-toggle::after {
+  content: '▼';
+  position: absolute;
+  right: 1rem;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-toggle::after {
+  transform: rotate(-180deg);
+}
+
+.accordion-toggle:hover {
+  background: #0055a5;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background: #f9f9f9;
+  padding: 0 1rem;
+}
+
+.accordion-item.open .accordion-content {
+  max-height: 500px;
+  padding: 1rem;
+}
+
+.accordion-content ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+}
+
+/* Base dropdown styling */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #003366;
+  display: none;
+  flex-direction: column;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 0 0 6px 6px;
+  z-index: 1000;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu a {
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid #ffffff22;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+  background: #0055a5;
+}
+
+/* Nested dropdown */
+.nested-dropdown {
+  position: relative;
+}
+
+.nested-dropdown > .dropdown-toggle::after {
+  content: " ▸";
+}
+
+.nested-dropdown > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* Scrollable long dropdown */
+.long-menu {
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) var(--color-primary-dark);
+}
+
+.long-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.long-menu::-webkit-scrollbar-track {
+  background: var(--color-primary-dark);
+}
+
+.long-menu::-webkit-scrollbar-thumb {
+  background-color: var(--color-gold);
+  border-radius: 3px;
+}
+
+
+.enroll-button {
+  display: inline-block;
+  padding: 1rem 1rem;
+  background-color: var(--color-secondary); /* Red: #d62828 */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50%;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 70px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.enroll-button:hover {
+  background-color: #b71c1c;
+  transform: scale(1.1);
+}
+
+
+.download-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-download {
+  background-color: #003366; /* Match RAP blue */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: #00224d;
+}
+
+
+.section .content h3{
+  color: rgb(110, 97, 23);
+}
+
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 2rem; /* Adjust spacing between buttons */
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.btn-primary {
+  background-color: #003366; /* RAP blue */
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #00224d;
+  transform: translateY(-2px);
 }

@@ -1,0 +1,75 @@
+:root {
+    --blue: #023e8a;
+    --light-blue: #90e0ef;
+    --white: #ffffff;
+    --black: #1a1a1a;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--white), var(--light-blue), var(--blue));
+    background-size: 400% 400%;
+    animation: bgAnimation 20s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--blue);
+    text-align: center;
+  }
+  
+  @keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .coming-soon-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    max-width: 500px;
+  }
+  
+  .coming-soon-container h1 {
+    font-size: 3rem;
+    color: var(--blue);
+    margin-bottom: 1rem;
+  }
+  
+  .coming-soon-container p {
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 2rem;
+  }
+  
+  .countdown {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .countdown div {
+    background-color: var(--blue);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1 1 80px;
+  }
+  
+  .countdown span {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .countdown label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  

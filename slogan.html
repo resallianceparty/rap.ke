@@ -3,18 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Resource Centre - RAP</title>
+  <title>About RAP</title>
   <link rel="stylesheet" href="styles/rap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Header with Logo -->
   <header class="header">
     <div class="container">
       <div class="logo-area">
-        <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
-        
+        <a href="index.html"><img src="assets/logo.png" alt="RAP Logo" class="logo-img" /></a>
       </div>
+  
       <nav class="main-nav">
         <a href="index.html">Home</a>
       
@@ -64,59 +63,41 @@
         <a href="news.html">News & Updates</a>
         <a href="contact.html">Contact</a>
       </nav>
-      
     
+  
 
-<a href="get-involved.html" class="enroll-button">Enroll</a>
+
+    <a href="get-involved.html" class="enroll-button">Enroll</a>
 
   </header>
 
-  <div class="page-wrapper animate-home"> <!-- animate-home changes per page -->
-    <!-- Your header + content + footer -->
-  </div>
 
   <main class="section">
     <div class="content">
-      <h2>Resource Centre</h2>
-      <p>Explore RAP’s official documents, careers, tenders, and opportunities to serve as an aspirant. Content is regularly updated and available for download.</p>
+      <h1>Our Slogan</h1>
+      <p>
+        The party slogan “Mambo Sawa Sawa” (Things are already better) embodies RAP’s ethical and moral vision of a Kenya where opportunity is a universal right rather than a privilege reserved for a select few under RAP’s Manifesto flagship banner “The Nation of Opportunities”. This vision rests on three core ethical principles:
+      </p>
+      <p></p>
+      <ol>
+         1.Dignity and Respect for All: RAP acknowledges that every Kenyan, regardless of their background, deserves respect and the right to live a dignified life. Policies will ensure access to resources and opportunities that empower individuals to achieve their potential.
+      </ol>
 
-      <section class="resource-section">
-        <h2>Documents & Downloads</h2>
-        <div class="download-buttons">
-          <a href="documents/rap-ideology.pdf" download class="btn-download">RAP Ideology</a>
-          <a href="documents/rap-constitution.pdf" download class="btn-download">RAP Constitution</a>
-          <a href="documents/election-rules.pdf" download class="btn-download">Elections & Nomination Rules</a>
-          <a href="documents/rap-manifesto.pdf" download class="btn-download">RAP Manifesto</a>
-        </div>
-      </section>
-      
+      <ol>
+        2.Accountability and Integrity: Guided by the value of servant leadership, RAP emphasizes governance practices that prioritize the common good over personal or political gain. Leaders are expected to act transparently and ethically in managing Kenya’s resources and affairs.
+      </ol>
 
-      <section class="resource-section">
-        <h2>Careers & Jobs</h2>
-        <p>We are building a professional team to support the Party’s mission. Open positions are posted here.</p>
-        <p class="note">[CMS Hook: Careers fetched from backend job board]</p>
-        <a href="careers.html" class="btn-secondary">View Careers</a>
-      </section>
-
-      <section class="resource-section">
-        <h2>Tenders</h2>
-        <p>We support fair procurement practices. View and apply for open tenders here.</p>
-        <p class="note">[CMS Hook: Tenders rendered dynamically]</p>
-        <a href="tenders.html" class="btn-secondary">View Tenders</a>
-      </section>
+      <ol>
+        3.Stewardship of Resources: RAP recognizes the responsibility to manage Kenya’s natural and economic resources wisely, ensuring their preservation for future generations while creating wealth and opportunities for the present.
+      </ol>
 
 
-
-      <section class="resource-section">
-        <h2>Public Notices</h2>
-        <ul class="notice-list">
-          <li>Notice of National Executive Council Meeting - August 2025</li>
-          <li>Call for County Congress Members - Ongoing</li>
-        </ul>
-        <p class="note">[CMS Hook: Notices auto-published by Secretariat]</p>
-      </section>
     </div>
   </main>
+
+
+
+
 
   <!-- Footer -->
   <footer class="footer">
@@ -155,5 +136,31 @@
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
   </script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('mobileNav');
+    menu.classList.toggle('open');
+  }
+
+  // Accordion Logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accordion-item');
+
+    accordions.forEach(item => {
+      const toggle = item.querySelector('.accordion-toggle');
+      toggle.addEventListener('click', () => {
+        // Close others
+        accordions.forEach(i => {
+          if (i !== item) i.classList.remove('open');
+        });
+        // Toggle this one
+        item.classList.toggle('open');
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>

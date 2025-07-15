@@ -5,38 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>News & Updates - RAP</title>
   <link rel="stylesheet" href="styles/rap.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <!-- Header -->
-  <header class="header full-centered">
+  <header class="header">
     <div class="container">
       <div class="logo-area">
         <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
-       
+        
       </div>
-
       <nav class="main-nav">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+      
+        <div class="dropdown">
+          <a href="about.html" class="dropdown-toggle">About ▾</a>
+          <div class="dropdown-menu">
+            <a href="vision.html">Vision</a>
+            <a href="mission.html">Mission</a>
+            <a href="founding.html">Founding</a>
+            <a href="core-values.html">Core Values</a>
+            <a href="slogan.html">Our Slogan</a>
+      
+            <!-- Nested dropdown begins -->
+            <div class="dropdown nested-dropdown">
+              <a href="party-organs.html" class="dropdown-toggle">Party Organs ▸</a>
+              <div class="dropdown-menu long-menu">
+                <a href="org-structure.html">RAP Organizational Structure</a>
+                <a href="ndc.html">National Delegates Convention (NDC)</a>
+                <a href="ngc.html">National Governing Council (NGC)</a>
+                <a href="nac.html">National Advisory Council (NAC)</a>
+                <a href="nec.html">RAP NEC</a>
+                <a href="national-secretariat.html">RAP National Secretariat (NS)</a>
+                <a href="nec-support.html">RAP NEC Support Committees</a>
+                <a href="nenb.html">National Elections and Nominations Board (NENB)</a>
+                <a href="rdc.html">Regional Delegates Convention (RDC)</a>
+                <a href="cdc.html">County Delegates Convention (CDC)</a>
+                <a href="rwl.html">RAP Women League (RWL)</a>
+                <a href="ryl.html">RAP Youth League (RYL)</a>
+                <a href="rel.html">RAP Elders League (REL)</a>
+                <a href="ril.html">RAP Interfaith League (RIL)</a>
+                <a href="rsigl.html">RAP SIG League (RSIGL)</a>
+                <a href="dlc.html">RAP Diaspora League Chapter (DLC)</a>
+                <a href="bec.html">Branch Executive Committees (BEC)</a>
+                <a href="sbec.html">Sub-Branch Executive Committees (SBEC)</a>
+                <a href="wec.html">Ward Executive Committees (WEC)</a>
+                <a href="pcec.html">Polling Centre Executive Committee (PCEC)</a>
+              </div>
+            </div>
+            <!-- Nested dropdown ends -->
+          </div>
+        </div>
+      
         <a href="ideology.html">Ideology</a>
         <a href="manifesto.html">Manifesto</a>
         <a href="resource-centre.html">Resource Centre</a>
         <a href="get-involved.html">Get Involved</a>
-        <a href="news.html" class="active">News & Updates</a>
+        <a href="news.html">News & Updates</a>
         <a href="contact.html">Contact</a>
       </nav>
+      
+    
 
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <div class="mobile-nav" id="mobileNav"></div>
-    </div>
 
-        <!-- Drop Animation Background -->
-        <div class="drip-background">
-          <div class="drip drip1"></div>
-          <div class="drip drip2"></div>
-          <div class="drip drip4"></div>
-          <div class="drip drip5"></div>
-        </div>
+
+<a href="get-involved.html" class="enroll-button">Enroll</a>
 
   </header>
 
@@ -47,7 +80,7 @@
   <!-- Main Content -->
   <main class="section">
     <div class="content">
-      <h1>News & Updates</h1>
+      <h2>News & Updates</h2>
       <p>Stay informed with the latest announcements, policy statements, and milestones from the Restoration Alliance Party.</p>
 
       <section class="news-section">
@@ -83,10 +116,32 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-content">
-      <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
-      <p>Email: info@rap.or.ke | Phone: +254XXXXXX</p>
-      <p>Follow Us: X, Facebook, LinkedIn, TikTok</p>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h2>Restoration Alliance Party 2025</h2>
+        <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
+        <p>Email: info@rap.or.ke | Phone: +254-707-7995-14</p>
+      </div>
+
+
+      <div class="footer-center">
+        <ul class="footer-links">
+          <p><a href="privacy-policy.html">Privacy Policy | </a>   <a href="terms-of-use.html">Terms of Use | </a>  <a href="submission.html">Submission terms  </a></p>
+          <p></p>
+        </ul>
+      </div>
+  
+      <div class="footer-center">
+        <div class="social-icons">
+          <a href="#" aria-label="X/Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+  
+
     </div>
   </footer>
 
