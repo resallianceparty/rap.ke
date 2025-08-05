@@ -1,50 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon</title>
-  <link rel="stylesheet" href="styles/coming-soon.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join RAP - Membership Registration</title>
+  <link rel="stylesheet" href="styles/rap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <div class="coming-soon-container">
-    <h1>COMING SOON!</h1>
-    <p>We're working hard to launch this feature.</p>
-    <div id="countdown" class="countdown">
-      <div><span id="months">--</span><label>Months</label></div>
-      <div><span id="days">--</span><label>Days</label></div>
-      <div><span id="hours">--</span><label>Hours</label></div>
-      <div><span id="minutes">--</span><label>Minutes</label></div>
-      <div><span id="seconds">--</span><label>Seconds</label></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo-area">
+        <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
+        
+
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+      
+        <div class="dropdown">
+
+          <a class="dropdown-toggle">About ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="vision.html">Vision</a>
+                        <!-- Nested dropdown begins -->
+            <div class="dropdown nested-dropdown">
+              <a class="dropdown-toggle">Party Organs ▸</a>
+              <div class="dropdown-menu long-menu">
+                <a href="party-organs.html">Party Organs</a>
+                <a href="org-structure.html">RAP Organizational Structure</a>
+                <a href="ndc.html">National Delegates Convention (NDC)</a>
+                <a href="ngc.html">National Governing Council (NGC)</a>
+                <a href="nac.html">National Advisory Council (NAC)</a>
+                <a href="nec.html">RAP NEC</a>
+                <a href="national-secretariat.html">RAP National Secretariat (NS)</a>
+                <a href="nec-support.html">RAP NEC Support Committees</a>
+                <a href="nenb.html">National Elections and Nominations Board (NENB)</a>
+                <a href="rdc.html">Regional Delegates Convention (RDC)</a>
+                <a href="cdc.html">County Delegates Convention (CDC)</a>
+                <a href="rwl.html">RAP Women League (RWL)</a>
+                <a href="ryl.html">RAP Youth League (RYL)</a>
+                <a href="rel.html">RAP Elders League (REL)</a>
+                <a href="ril.html">RAP Interfaith League (RIL)</a>
+                <a href="rsigl.html">RAP SIG League (RSIGL)</a>
+                <a href="dlc.html">RAP Diaspora League Chapter (DLC)</a>
+                <a href="bec.html">Branch Executive Committees (BEC)</a>
+                <a href="sbec.html">Sub-Branch Executive Committees (SBEC)</a>
+                <a href="wec.html">Ward Executive Committees (WEC)</a>
+                <a href="pcec.html">Polling Centre Executive Committee (PCEC)</a>
+              </div>
+            </div>
+            <!-- Nested dropdown ends -->
+            <a href="founding.html">Founding</a>
+            <a href="core-values.html">Core Values</a>
+            <a href="slogan.html">Our Slogan</a>
+      
+          </div>
+        </div>
+      
+        <a href="ideology.html">Ideology</a>
+        <a href="manifesto.html">Manifesto</a>
+        <!-- Resource Centre Dropdown -->
+        <div class="dropdown">
+          <a class="dropdown-toggle">Resource Centre ▾</a>
+          <div class="dropdown-menu">
+            <a href="documents.html">Documents & Downloads</a>
+            <a href="tenders.html">Tenders</a>
+            <a href="careers.html">Careers & Jobs</a>
+          </div>
+        </div>
+        <a href="get-involved.html">Get Involved</a>
+        <!-- News & Publications Dropdown -->
+        <div class="dropdown">
+          <a class="dropdown-toggle">News & Publications ▾</a>
+          <div class="dropdown-menu">
+          <a href="latest-highlights.html">Latest Highlights</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="media-releases.html">Media Releases</a>
+          <a href="events.html">Events</a>
+          <a href="reports.html">Reports</a>
+          <a href="public-notices.html">Public Notices</a>
+        </div>
+</div>
+
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav">
+  <a href="index.html">Home</a>
+
+  <!-- About Dropdown -->
+  <div class="mobile-dropdown">
+    <button class="dropdown-btn">About ▾</button>
+    <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="vision.html">Vision</a>
+      <a href="founding.html">Founding</a>
+      <a href="core-values.html">Core Values</a>
+      <a href="slogan.html">Our Slogan</a>
+
+      <!-- Nested Party Organs Dropdown -->
+      <div class="mobile-dropdown nested">
+        <button class="dropdown-btn">Party Organs ▸</button>
+        <div class="dropdown-content">
+          <a href="org-structure.html">RAP Organizational Structure</a>
+          <a href="ndc.html">National Delegates Convention (NDC)</a>
+          <a href="ngc.html">National Governing Council (NGC)</a>
+          <a href="nac.html">National Advisory Council (NAC)</a>
+          <a href="nec.html">RAP NEC</a>
+          <a href="national-secretariat.html">RAP National Secretariat (NS)</a>
+          <a href="nec-support.html">RAP NEC Support Committees</a>
+          <a href="nenb.html">National Elections and Nominations Board (NENB)</a>
+          <a href="rdc.html">Regional Delegates Convention (RDC)</a>
+          <a href="cdc.html">County Delegates Convention (CDC)</a>
+          <a href="rwl.html">RAP Women League (RWL)</a>
+          <a href="ryl.html">RAP Youth League (RYL)</a>
+          <a href="rel.html">RAP Elders League (REL)</a>
+          <a href="ril.html">RAP Interfaith League (RIL)</a>
+          <a href="rsigl.html">RAP SIG League (RSIGL)</a>
+          <a href="dlc.html">RAP Diaspora League Chapter (DLC)</a>
+          <a href="bec.html">Branch Executive Committees (BEC)</a>
+          <a href="sbec.html">Sub-Branch Executive Committees (SBEC)</a>
+          <a href="wec.html">Ward Executive Committees (WEC)</a>
+          <a href="pcec.html">Polling Centre Executive Committee (PCEC)</a>
+        </div>
+      </div>
     </div>
   </div>
 
+  <a href="ideology.html">Ideology</a>
+  <a href="manifesto.html">Manifesto</a>
+
+<div class="mobile-dropdown">
+  <button class="dropdown-btn">Resource Centre ▾</button>
+  <div class="dropdown-content">
+    <a href="documents.html">Documents & Downloads</a>
+    <a href="tenders.html">Tenders</a>
+    <a href="careers.html">Careers & Jobs</a>
+  </div>
+</div>
+  <a href="get-involved.html">Get Involved</a>
+<div class="mobile-dropdown">
+  <button class="dropdown-btn">News & Publications ▾</button>
+  <div class="dropdown-content">
+    <a href="latest-highlights.html">Latest Highlights</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="media-releases.html">Media Releases</a>
+    <a href="events.html">Events</a>
+    <a href="reports.html">Reports</a>
+    <a href="public-notices.html">Public Notices</a>
+  </div>
+</div>
+
+  <a href="contact.html">Contact</a>
+</nav>
+
+  </header>
+
+<main class="section">
+  <div class="content">
+    <h2>Join the Movement for a Restored Kenya!</h2>
+    <p>Be part of "The Nation of Opportunities" and help restore and transform Kenya. Fill in your details below to register as a member.</p>
+
+    
+<div class="language-toggle-container">
+  <div class="language-switch">
+    <span id="languageLabel">EN</span>
+    <label class="switch">
+      <input type="checkbox" id="languageToggle">
+      <span class="slider"></span>
+    </label>
+    <span id="languageLabel">SW</span>
+  </div>
+</div>
+
+
+<form action="php/process_membership.php" method="POST" class="membership-form" id="membershipForm">
+  <!-- Personal Info -->
+  <h3>Personal Information</h3>
+
+  <label for="surname">Surname *</label>
+  <input type="text" id="surname" name="surname" placeholder="e.g., Otieno" required>
+
+  <label for="otherNames">Other Names *</label>
+  <input type="text" id="otherNames" name="otherNames" placeholder="e.g., James Onyango" required>
+
+  <label for="dob">Date of Birth *</label>
+  <input type="date" id="dob" name="dob" required>
+
+  <label for="idNumber">ID or Passport Number *</label>
+  <input type="text" id="idNumber" name="idNumber" placeholder="e.g., 12345678" required>
+
+  <label for="email">Email Address *</label>
+  <input type="email" id="email" name="email" placeholder="e.g., example@email.com" required>
+
+  <label for="phone">Mobile Phone Number *</label>
+  <input type="tel" id="phone" name="phone" placeholder="e.g., +254 700 123 456" pattern="^\+?\d{10,15}$" required>
+
+  <label for="occupation">Occupation *</label>
+  <input type="text" id="occupation" name="occupation" placeholder="e.g., Teacher" required>
+
+  <label for="sex">Sex *</label>
+  <select id="sex" name="sex" required>
+    <option value="">Select Sex</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+  <!-- Location Information -->
+<h3>Location Details</h3>
+
+<label for="county">County *</label>
+<select id="county" name="county" required>
+  <option value="">Select County</option>
+  <option value="dummy">Placeholder - To be populated dynamically</option>
+</select>
+
+<label for="constituency">Constituency *</label>
+<select id="constituency" name="constituency" required>
+  <option value="">Select Constituency</option>
+  <option value="dummy">Placeholder - To be populated dynamically</option>
+</select>
+
+<label for="ward">Ward *</label>
+<select id="ward" name="ward" required>
+  <option value="">Select Ward</option>
+  <option value="dummy">Placeholder - To be populated dynamically</option>
+</select>
+
+<label for="pollingCenter">Polling Center *</label>
+<select id="pollingCenter" name="pollingCenter" required>
+  <option value="">Select Polling Center</option>
+  <option value="dummy">Placeholder - To be populated dynamically</option>
+</select>
+
+<!-- Demographic Information -->
+<h3>Additional Information</h3>
+
+<label for="ethnicity">Ethnicity *</label>
+<select id="ethnicity" name="ethnicity" required>
+  <option value="">Select Ethnicity</option>
+  <option value="dummy">Placeholder - To be populated dynamically</option>
+</select>
+
+<label for="religion">Religion *</label>
+<select id="religion" name="religion" required>
+  <option value="">Select Religion</option>
+  <option value="dummy">Placeholder - To be populated dynamically</option>
+</select>
+
+
+<h3>Membership Category</h3>
+<div class="membership-options">
+  <label class="radio-option">
+    Regular Member <small>(Joining Fee: 0-100 KES, Annual: 100 KES)</small>
+    <input type="radio" name="membership_category" value="Regular Member" required>
+  </label>
+
+  <label class="radio-option">
+    Life Member <small>(Joining Fee: 50,000 KES, Annual: 5,000 KES)</small>
+    <input type="radio" name="membership_category" value="Life Member">
+  </label>
+
+  <label class="radio-option">
+    Honorary Member <small>(Joining Fee: 100,000 KES, Annual: 10,000 KES)</small>
+    <input type="radio" name="membership_category" value="Honorary Member">
+  </label>
+
+  <label class="radio-option">
+    Affiliate Member <small>(Joining Fee: 250,000 KES, Annual: 50,000 KES)</small>
+    <input type="radio" name="membership_category" value="Affiliate Member">
+  </label>
+</div>
+
+
+
+  <!-- Consent -->
+<h3>Consent & Acknowledgment</h3>
+<label class="checkbox-option">
+  I agree to the Terms and Privacy Policy of RAP.
+  <input type="checkbox" name="consent" required>
+</label>
+
+
+  <button type="submit" class="btn-modern">Submit Registration</button>
+</form>
+
+<!-- Validation Script -->
+<script>
+document.getElementById('membershipForm').addEventListener('submit', function(e) {
+  let email = document.getElementById('email');
+  let phone = document.getElementById('phone');
+
+  // Email validation
+  if (!email.value.includes('@')) {
+    alert('Please enter a valid email address.');
+    e.preventDefault();
+    return;
+  }
+
+  // Phone validation
+  const phonePattern = /^\+?\d{10,15}$/;
+  if (!phonePattern.test(phone.value)) {
+    alert('Please enter a valid phone number (10-15 digits, optional +).');
+    e.preventDefault();
+    return;
+  }
+});
+</script>
+
+<script>
+const translations = {
+  en: {
+    surname: "Surname *",
+    otherNames: "Other Names *",
+    dob: "Date of Birth *",
+    idNumber: "ID or Passport Number *",
+    email: "Email Address *",
+    phone: "Mobile Phone Number *",
+    occupation: "Occupation *",
+    sex: "Sex *",
+    county: "County *",
+    constituency: "Constituency *",
+    ward: "Ward *",
+    pollingCenter: "Polling Center *",
+    ethnicity: "Ethnicity *",
+    religion: "Religion *",
+    membershipCategory: "Membership Category",
+    consent: "I agree to the Terms and Privacy Policy of RAP.",
+    submit: "Submit Registration"
+  },
+  sw: {
+    surname: "Jina la Ukoo *",
+    otherNames: "Majina Mengine *",
+    dob: "Tarehe ya Kuzaliwa *",
+    idNumber: "Nambari ya Kitambulisho au Pasipoti *",
+    email: "Barua Pepe *",
+    phone: "Nambari ya Simu ya Mkononi *",
+    occupation: "Kazi *",
+    sex: "Jinsia *",
+    county: "Kaunti *",
+    constituency: "Eneo Bunge *",
+    ward: "Wadi *",
+    pollingCenter: "Kituo cha Kupigia Kura *",
+    ethnicity: "Kabila *",
+    religion: "Dini *",
+    membershipCategory: "Aina ya Uanachama",
+    consent: "Ninakubali Masharti na Sera ya Faragha ya RAP.",
+    submit: "Tuma Fomu ya Usajili"
+  }
+};
+
+let currentLang = 'en';
+
+document.getElementById('languageToggle').addEventListener('click', function () {
+  currentLang = currentLang === 'en' ? 'sw' : 'en';
+  this.textContent = currentLang === 'en' ? 'SW' : 'EN'; // Toggle button label
+
+  // Update form labels
+  document.querySelector('label[for="surname"]').textContent = translations[currentLang].surname;
+  document.querySelector('label[for="otherNames"]').textContent = translations[currentLang].otherNames;
+  document.querySelector('label[for="dob"]').textContent = translations[currentLang].dob;
+  document.querySelector('label[for="idNumber"]').textContent = translations[currentLang].idNumber;
+  document.querySelector('label[for="email"]').textContent = translations[currentLang].email;
+  document.querySelector('label[for="phone"]').textContent = translations[currentLang].phone;
+  document.querySelector('label[for="occupation"]').textContent = translations[currentLang].occupation;
+  document.querySelector('label[for="sex"]').textContent = translations[currentLang].sex;
+  document.querySelector('label[for="county"]').textContent = translations[currentLang].county;
+  document.querySelector('label[for="constituency"]').textContent = translations[currentLang].constituency;
+  document.querySelector('label[for="ward"]').textContent = translations[currentLang].ward;
+  document.querySelector('label[for="pollingCenter"]').textContent = translations[currentLang].pollingCenter;
+  document.querySelector('label[for="ethnicity"]').textContent = translations[currentLang].ethnicity;
+  document.querySelector('label[for="religion"]').textContent = translations[currentLang].religion;
+
+ 
+
+  // Membership title
+  document.querySelector('h3:nth-of-type(3)').textContent = translations[currentLang].membershipCategory;
+
+  // Consent
+  document.querySelector('.checkbox-option').childNodes[0].textContent = translations[currentLang].consent;
+
+  // Submit button
+  document.querySelector('.btn-modern').textContent = translations[currentLang].submit;
+});
+</script>
+
   <script>
-    const endDate = new Date("2025-12-31T23:59:59").getTime();
+  // Toggle entire mobile menu
+  function toggleMenu() {
+    const menu = document.getElementById('mobileNav');
+    menu.classList.toggle('open');
+  }
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = endDate - now;
+  // Handle dropdown toggles inside mobile nav
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButtons = document.querySelectorAll(".mobile-dropdown .dropdown-btn");
 
-      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    dropdownButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        this.parentElement.classList.toggle("open");
+      });
+    });
+  });
+</script>
 
-      document.getElementById("months").textContent = months;
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = seconds;
 
-      if (distance < 0) {
-        document.querySelector(".countdown").innerHTML = "<p>We're live now!</p>";
-      }
-    }
+  </div>
+</main>
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Branding / Contact Section -->
+    <div class="footer-section footer-left">
+      <h3>Restoration Alliance Party 2025</h3>
+      <div class="contact-info">
+        <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
+        <p>Email: <a href="mailto:info@rap.or.ke">info@rap.or.ke</a></p>
+        <p>Phone: +254-722-7814-04</p>
+      </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-section footer-quicklinks">
+      <h3>Quick Links</h3>
+      <ul>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="ideology.html">Ideology</a></p>
+        <p><a href="manifesto.html">Manifesto</a></p>
+        <p><a href="resource-centre.html">Resource Centre</a></p>
+        <p><a href="get-involved.html">Get Involved</a></p>
+        <p><a href="news.html">News & Publications</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </ul>
+    </div>
+
+    <!-- Legal Information Section -->
+    <div class="footer-section footer-legal">
+      <h3>Legal Information</h3>
+      <ul>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        <p><a href="terms-of-use.html">Terms of Use</a></p>
+        <p><a href="submission.html">Submission Terms</a></p>
+        <p><a href="submission.html">Membership conditions</a></p>
+      </ul>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-section footer-socials">
+      <h3>Socials</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>

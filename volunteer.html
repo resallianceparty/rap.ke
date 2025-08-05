@@ -2,49 +2,321 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Coming Soon</title>
-  <link rel="stylesheet" href="styles/coming-soon.css" />
+  <title>Volunteer Registration - RAP</title>
+  <link rel="stylesheet" href="styles/rap.css" />
 </head>
 <body>
-  <div class="coming-soon-container">
-    <h1>COMING SOON!</h1>
-    <p>We're working hard to launch this feature.</p>
-    <div id="countdown" class="countdown">
-      <div><span id="months">--</span><label>Months</label></div>
-      <div><span id="days">--</span><label>Days</label></div>
-      <div><span id="hours">--</span><label>Hours</label></div>
-      <div><span id="minutes">--</span><label>Minutes</label></div>
-      <div><span id="seconds">--</span><label>Seconds</label></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo-area">
+        <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
+        
+
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+      
+        <div class="dropdown">
+
+          <a class="dropdown-toggle">About ▾</a>
+          <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
+            <a href="vision.html">Vision</a>
+                        <!-- Nested dropdown begins -->
+            <div class="dropdown nested-dropdown">
+              <a class="dropdown-toggle">Party Organs ▸</a>
+              <div class="dropdown-menu long-menu">
+                <a href="party-organs.html">Party Organs</a>
+                <a href="org-structure.html">RAP Organizational Structure</a>
+                <a href="ndc.html">National Delegates Convention (NDC)</a>
+                <a href="ngc.html">National Governing Council (NGC)</a>
+                <a href="nac.html">National Advisory Council (NAC)</a>
+                <a href="nec.html">RAP NEC</a>
+                <a href="national-secretariat.html">RAP National Secretariat (NS)</a>
+                <a href="nec-support.html">RAP NEC Support Committees</a>
+                <a href="nenb.html">National Elections and Nominations Board (NENB)</a>
+                <a href="rdc.html">Regional Delegates Convention (RDC)</a>
+                <a href="cdc.html">County Delegates Convention (CDC)</a>
+                <a href="rwl.html">RAP Women League (RWL)</a>
+                <a href="ryl.html">RAP Youth League (RYL)</a>
+                <a href="rel.html">RAP Elders League (REL)</a>
+                <a href="ril.html">RAP Interfaith League (RIL)</a>
+                <a href="rsigl.html">RAP SIG League (RSIGL)</a>
+                <a href="dlc.html">RAP Diaspora League Chapter (DLC)</a>
+                <a href="bec.html">Branch Executive Committees (BEC)</a>
+                <a href="sbec.html">Sub-Branch Executive Committees (SBEC)</a>
+                <a href="wec.html">Ward Executive Committees (WEC)</a>
+                <a href="pcec.html">Polling Centre Executive Committee (PCEC)</a>
+              </div>
+            </div>
+            <!-- Nested dropdown ends -->
+            <a href="founding.html">Founding</a>
+            <a href="core-values.html">Core Values</a>
+            <a href="slogan.html">Our Slogan</a>
+      
+          </div>
+        </div>
+      
+        <a href="ideology.html">Ideology</a>
+        <a href="manifesto.html">Manifesto</a>
+        <!-- Resource Centre Dropdown -->
+        <div class="dropdown">
+          <a class="dropdown-toggle">Resource Centre ▾</a>
+          <div class="dropdown-menu">
+            <a href="documents.html">Documents & Downloads</a>
+            <a href="tenders.html">Tenders</a>
+            <a href="careers.html">Careers & Jobs</a>
+          </div>
+        </div>
+        <a href="get-involved.html">Get Involved</a>
+        <!-- News & Publications Dropdown -->
+        <div class="dropdown">
+          <a class="dropdown-toggle">News & Publications ▾</a>
+          <div class="dropdown-menu">
+          <a href="latest-highlights.html">Latest Highlights</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="media-releases.html">Media Releases</a>
+          <a href="events.html">Events</a>
+          <a href="reports.html">Reports</a>
+          <a href="public-notices.html">Public Notices</a>
+        </div>
+</div>
+
+        <a href="contact.html">Contact</a>
+
+      </nav>
+
+        <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav">
+  <a href="index.html">Home</a>
+
+  <!-- About Dropdown -->
+  <div class="mobile-dropdown">
+    <button class="dropdown-btn">About ▾</button>
+    <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="vision.html">Vision</a>
+      <a href="founding.html">Founding</a>
+      <a href="core-values.html">Core Values</a>
+      <a href="slogan.html">Our Slogan</a>
+
+      <!-- Nested Party Organs Dropdown -->
+      <div class="mobile-dropdown nested">
+        <button class="dropdown-btn">Party Organs ▸</button>
+        <div class="dropdown-content">
+          <a href="org-structure.html">RAP Organizational Structure</a>
+          <a href="ndc.html">National Delegates Convention (NDC)</a>
+          <a href="ngc.html">National Governing Council (NGC)</a>
+          <a href="nac.html">National Advisory Council (NAC)</a>
+          <a href="nec.html">RAP NEC</a>
+          <a href="national-secretariat.html">RAP National Secretariat (NS)</a>
+          <a href="nec-support.html">RAP NEC Support Committees</a>
+          <a href="nenb.html">National Elections and Nominations Board (NENB)</a>
+          <a href="rdc.html">Regional Delegates Convention (RDC)</a>
+          <a href="cdc.html">County Delegates Convention (CDC)</a>
+          <a href="rwl.html">RAP Women League (RWL)</a>
+          <a href="ryl.html">RAP Youth League (RYL)</a>
+          <a href="rel.html">RAP Elders League (REL)</a>
+          <a href="ril.html">RAP Interfaith League (RIL)</a>
+          <a href="rsigl.html">RAP SIG League (RSIGL)</a>
+          <a href="dlc.html">RAP Diaspora League Chapter (DLC)</a>
+          <a href="bec.html">Branch Executive Committees (BEC)</a>
+          <a href="sbec.html">Sub-Branch Executive Committees (SBEC)</a>
+          <a href="wec.html">Ward Executive Committees (WEC)</a>
+          <a href="pcec.html">Polling Centre Executive Committee (PCEC)</a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <script>
-    const endDate = new Date("2025-12-31T23:59:59").getTime();
+  <a href="ideology.html">Ideology</a>
+  <a href="manifesto.html">Manifesto</a>
 
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = endDate - now;
+<div class="mobile-dropdown">
+  <button class="dropdown-btn">Resource Centre ▾</button>
+  <div class="dropdown-content">
+    <a href="documents.html">Documents & Downloads</a>
+    <a href="tenders.html">Tenders</a>
+    <a href="careers.html">Careers & Jobs</a>
+  </div>
+</div>
+  <a href="get-involved.html">Get Involved</a>
+<div class="mobile-dropdown">
+  <button class="dropdown-btn">News & Publications ▾</button>
+  <div class="dropdown-content">
+    <a href="latest-highlights.html">Latest Highlights</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="media-releases.html">Media Releases</a>
+    <a href="events.html">Events</a>
+    <a href="reports.html">Reports</a>
+    <a href="public-notices.html">Public Notices</a>
+  </div>
+</div>
 
-      const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-      const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  <a href="contact.html">Contact</a>
+</nav>
 
-      document.getElementById("months").textContent = months;
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = seconds;
+  </header>
 
-      if (distance < 0) {
-        document.querySelector(".countdown").innerHTML = "<p>We're live now!</p>";
-      }
-    }
+  <main class="section about-page">
+        <div class="content">
+  
 
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+  <form action="#" method="POST" class="join-form">
+
+    <h2>Volunteer Registration Form</h2>
+    
+    <!-- National ID -->
+    <label for="idNumber">National ID Number *</label>
+    <input type="text" id="idNumber" name="idNumber" placeholder="Enter your National ID Number" required />
+
+    <!-- Volunteer Level -->
+    <h3>Preferred Volunteer Level</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="volunteerLevel" value="National Level"> National Level</label>
+      <label><input type="checkbox" name="volunteerLevel" value="Regional Coordination Level"> Regional Coordination Level</label>
+      <label><input type="checkbox" name="volunteerLevel" value="County Level"> County (Branch) Level</label>
+      <label><input type="checkbox" name="volunteerLevel" value="Constituency Level"> Constituency (Sub-Branch) Level</label>
+      <label><input type="checkbox" name="volunteerLevel" value="Ward Level"> Ward Level</label>
+      <label><input type="checkbox" name="volunteerLevel" value="Polling Centre Level"> Polling Centre Level</label>
+    </div>
+
+    <!-- Areas of Interest -->
+    <h3>Areas of Interest</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="areasOfInterest" value="Recruitment Agent"> Recruitment Agent</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Community Mobilization"> Community Mobilization & Engagement</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Women Engagement"> Women Engagement & Leadership</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Youth Engagement"> Youth Engagement & Mentorship</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Diaspora Engagement"> Diaspora Engagement & Leadership</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Digital Campaigning"> Digital Campaigning & Social Media</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Voter Education"> Voter Education & Outreach</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Content Creation"> Content Creation (Writing, Graphics, Video)</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Event Planning"> Event Planning & Logistics</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Door-to-Door Canvassing"> Door-to-Door Canvassing</label>
+      <label><input type="checkbox" name="areasOfInterest" value="Other"> Other: 
+        <input type="text" name="otherInterest" placeholder="Specify if other" />
+      </label>
+    </div>
+
+    <!-- Availability -->
+    <h3>Availability</h3>
+    <label for="hoursPerWeek">Hours per week you can volunteer</label>
+    <input type="number" id="hoursPerWeek" name="hoursPerWeek" min="1" max="168" placeholder="e.g., 10" />
+
+    <p>Preferred Days:</p>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" name="preferredDays" value="Mon"> Mon</label>
+      <label><input type="checkbox" name="preferredDays" value="Tue"> Tue</label>
+      <label><input type="checkbox" name="preferredDays" value="Wed"> Wed</label>
+      <label><input type="checkbox" name="preferredDays" value="Thu"> Thu</label>
+      <label><input type="checkbox" name="preferredDays" value="Fri"> Fri</label>
+      <label><input type="checkbox" name="preferredDays" value="Sat"> Sat</label>
+      <label><input type="checkbox" name="preferredDays" value="Sun"> Sun</label>
+    </div>
+
+    <p>Preferred Time of Day:</p>
+    <div class="checkbox-inline">
+      <label><input type="checkbox" name="preferredTime" value="Morning"> Morning</label>
+      <label><input type="checkbox" name="preferredTime" value="Afternoon"> Afternoon</label>
+      <label><input type="checkbox" name="preferredTime" value="Evening"> Evening</label>
+    </div>
+
+    <!-- Motivation -->
+    <label for="motivation">Brief Motivation *</label>
+    <textarea id="motivation" name="motivation" rows="5" maxlength="500" placeholder="Why do you want to volunteer with RAP?" required></textarea>
+
+    <!-- Consent -->
+    <h3>Consent</h3>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="consentContact" required> I consent to be contacted by RAP for volunteer-related updates.</label>
+      <label><input type="checkbox" name="consentInfo" required> I confirm that the above information is true and accurate.</label>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn-primary">Submit Volunteer Form</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Branding / Contact Section -->
+    <div class="footer-section footer-left">
+      <h3>Restoration Alliance Party 2025</h3>
+      <div class="contact-info">
+        <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
+        <p>Email: <a href="mailto:info@rap.or.ke">info@rap.or.ke</a></p>
+        <p>Phone: +254-722-7814-04</p>
+      </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="footer-section footer-quicklinks">
+      <h3>Quick Links</h3>
+      <ul>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="ideology.html">Ideology</a></p>
+        <p><a href="manifesto.html">Manifesto</a></p>
+        <p><a href="resource-centre.html">Resource Centre</a></p>
+        <p><a href="get-involved.html">Get Involved</a></p>
+        <p><a href="news.html">News & Publications</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </ul>
+    </div>
+
+    <!-- Legal Information Section -->
+    <div class="footer-section footer-legal">
+      <h3>Legal Information</h3>
+      <ul>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        <p><a href="terms-of-use.html">Terms of Use</a></p>
+        <p><a href="submission.html">Submission Terms</a></p>
+        <p><a href="submission.html">Membership conditions</a></p>
+      </ul>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-section footer-socials">
+      <h3>Socials</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+    <script>
+  // Toggle entire mobile menu
+  function toggleMenu() {
+    const menu = document.getElementById('mobileNav');
+    menu.classList.toggle('open');
+  }
+
+  // Handle dropdown toggles inside mobile nav
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButtons = document.querySelectorAll(".mobile-dropdown .dropdown-btn");
+
+    dropdownButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        this.parentElement.classList.toggle("open");
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

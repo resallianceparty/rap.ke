@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Party Organs - RAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Highlights - RAP</title>
   <link rel="stylesheet" href="styles/rap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -165,21 +166,42 @@
 
   </header>
 
+<!-- Content -->
   <main class="section">
     <div class="content">
-      <h1>Party Organs</h1>
-      <ul>
-        <li>National Delegates Congress</li>
-        <li>National Governing Council</li>
-        <li>National Executive Committee</li>
-        <li>National Secretariat</li>
-        <li>County Congress</li>
-        <li>Sub-County/Constituency Branch</li>
-        <li>Ward Branch</li>
-        <li>Party Caucuses (Women, Youth, Diaspora, Disability, etc.)</li>
-      </ul>
+      <h2>Party Reports</h2>
+      <p>Download key reports, financial statements, and strategic documents published by RAP.</p>
+
+      <div class="reports-list">
+        <!-- Report Item -->
+        <div class="report-card">
+          <h3>Annual Progress Report 2025</h3>
+          <p>A comprehensive overview of RAP’s milestones, events, and initiatives throughout the year.</p>
+          <a href="documents/annual-progress-report-2025.pdf" download class="btn-download gold">Download Report</a>
+        </div>
+
+        <div class="report-card">
+          <h3>Financial Accountability Report Q2</h3>
+          <p>Detailed financial statements and transparency measures for the second quarter.</p>
+          <a href="documents/financial-report-q2.pdf" download class="btn-download gold">Download Report</a>
+        </div>
+      </div>
+
+      <p class="note">[CMS Hook: Reports will be dynamically listed here via database]</p>
+
+      <!-- Hidden Admin Form -->
+      <div class="admin-form hidden">
+        <h3>Add New Report</h3>
+        <form>
+          <input type="text" placeholder="Report Title" required>
+          <textarea placeholder="Report Description" required></textarea>
+          <input type="file" accept=".pdf" required>
+          <button type="submit" class="btn-primary">Upload Report</button>
+        </form>
+      </div>
     </div>
   </main>
+
 
 <!-- Footer -->
 <footer class="footer">
@@ -235,6 +257,14 @@
 
   </div>
 </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
 
   <script>
   // Toggle entire mobile menu

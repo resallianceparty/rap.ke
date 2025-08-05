@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Party Organs - RAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Highlights - RAP</title>
   <link rel="stylesheet" href="styles/rap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -165,19 +166,38 @@
 
   </header>
 
+  <!-- Content -->
   <main class="section">
     <div class="content">
-      <h1>Party Organs</h1>
-      <ul>
-        <li>National Delegates Congress</li>
-        <li>National Governing Council</li>
-        <li>National Executive Committee</li>
-        <li>National Secretariat</li>
-        <li>County Congress</li>
-        <li>Sub-County/Constituency Branch</li>
-        <li>Ward Branch</li>
-        <li>Party Caucuses (Women, Youth, Diaspora, Disability, etc.)</li>
+      <h2>Media Releases</h2>
+      <p>Stay updated with RAP’s official press statements and announcements.</p>
+
+      <ul class="media-list">
+        <li>
+          <span class="media-date">12 July 2025</span>
+          <a href="#" class="media-link">Press Statement: Youth in Governance Initiative</a>
+        </li>
+        <li>
+          <span class="media-date">06 July 2025</span>
+          <a href="#" class="media-link">Speech: RAP’s Vision for Inclusive Economic Growth</a>
+        </li>
+        <li>
+          <span class="media-date">28 June 2025</span>
+          <a href="#" class="media-link">Interview: Founding Member on Party Strategy</a>
+        </li>
       </ul>
+
+      <p class="note">[CMS Hook: Dynamic list of media releases to be populated here]</p>
+
+      <!-- Hidden Admin Form -->
+      <div class="admin-form hidden">
+        <h3>Upload New Media Release</h3>
+        <form>
+          <input type="text" placeholder="Title" required>
+          <textarea placeholder="Description or link" required></textarea>
+          <button type="submit" class="btn-primary">Upload</button>
+        </form>
+      </div>
     </div>
   </main>
 
@@ -233,8 +253,19 @@
       </div>
     </div>
 
+</div>
+
+
   </div>
 </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
 
   <script>
   // Toggle entire mobile menu

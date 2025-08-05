@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Party Organs - RAP</title>
-  <link rel="stylesheet" href="styles/rap.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aspirant Expression of Interest - RAP</title>
+  <link rel="stylesheet" href="styles/rap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -165,21 +166,86 @@
 
   </header>
 
-  <main class="section">
+  <main class="section about-page">
     <div class="content">
-      <h1>Party Organs</h1>
-      <ul>
-        <li>National Delegates Congress</li>
-        <li>National Governing Council</li>
-        <li>National Executive Committee</li>
-        <li>National Secretariat</li>
-        <li>County Congress</li>
-        <li>Sub-County/Constituency Branch</li>
-        <li>Ward Branch</li>
-        <li>Party Caucuses (Women, Youth, Diaspora, Disability, etc.)</li>
-      </ul>
-    </div>
-  </main>
+
+    
+
+    <form action="#" method="POST" class="styled-form">
+
+        <h2>Aspirant Expression of Interest</h2>
+    <p>Please fill this form to express interest in running for elective office under RAP.</p>
+
+      <!-- National ID -->
+      <label for="idNumber">National ID Number *</label>
+      <input type="text" id="idNumber" name="idNumber" placeholder="Enter your National ID Number" required>
+
+      <!-- Auto-Filled Details -->
+      <fieldset class="auto-details">
+        <legend>Membership Details (Auto-Filled)</legend>
+        <input type="text" placeholder="Full Name" readonly>
+        <input type="text" placeholder="Membership Number" readonly>
+        <input type="text" placeholder="County" readonly>
+        <input type="text" placeholder="Constituency" readonly>
+        <input type="text" placeholder="Ward" readonly>
+        <input type="text" placeholder="Phone Number" readonly>
+        <input type="text" placeholder="Email Address" readonly>
+      </fieldset>
+
+      <!-- Election Type -->
+      <label>Election Type *</label>
+      <div class="checkbox-group">
+        <label><input type="radio" name="electionType" value="General Election" required> General Election (2027)</label>
+        <label><input type="radio" name="electionType" value="By-Election" required> By-Election</label>
+      </div>
+
+      <!-- Position(s) Interested In -->
+      <label>Position(s) You Are Interested In (Max 2)</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="position" value="Governor"> Governor</label>
+        <label><input type="checkbox" name="position" value="Deputy Governor"> Deputy Governor</label>
+        <label><input type="checkbox" name="position" value="Senator"> Senator</label>
+        <label><input type="checkbox" name="position" value="County Woman Representative"> County Woman Representative</label>
+        <label><input type="checkbox" name="position" value="MP"> Member of Parliament (MP – National Assembly)</label>
+        <label><input type="checkbox" name="position" value="MCA"> Member of County Assembly (MCA)</label>
+      </div>
+
+      <!-- Conditional Dropdowns -->
+      <label for="county">County</label>
+      <select id="county" name="county">
+        <option value="">Select County</option>
+        <!-- Add 47 Kenyan counties -->
+      </select>
+
+      <label for="constituency">Constituency</label>
+      <select id="constituency" name="constituency">
+        <option value="">Select Constituency</option>
+      </select>
+
+      <label for="ward">Ward</label>
+      <select id="ward" name="ward">
+        <option value="">Select Ward</option>
+      </select>
+
+      <!-- Motivation -->
+      <label for="motivation">Motivation *</label>
+      <textarea id="motivation" name="motivation" rows="5" maxlength="500" placeholder="Briefly explain why you want to run for this position" required></textarea>
+
+      <!-- Confirmation & Consent -->
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="confirm" required> I confirm that the above information is true and correct.</label>
+        <label><input type="checkbox" name="consent" required> I understand this is only an expression of interest, not a formal nomination application.</label>
+      </div>
+
+      <p class="disclaimer">
+        <strong>Disclaimer:</strong> This is not an official application form for nomination as required by RAP Party Elections and Nominations (Form 5). Refer to Sections 12–14 of RAP regulations for details.
+      </p>
+
+      <!-- Submit -->
+      <button type="submit" class="btn-primary">Submit</button>
+    </form>
+  </div>
+</main>
 
 <!-- Footer -->
 <footer class="footer">
@@ -236,6 +302,13 @@
   </div>
 </footer>
 
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
   <script>
   // Toggle entire mobile menu
   function toggleMenu() {
@@ -253,6 +326,29 @@
       });
     });
   });
+</script>
+
+<!-- Validation Script -->
+<script>
+document.getElementById('membershipForm').addEventListener('submit', function(e) {
+  let email = document.getElementById('email');
+  let phone = document.getElementById('phone');
+
+  // Email validation
+  if (!email.value.includes('@')) {
+    alert('Please enter a valid email address.');
+    e.preventDefault();
+    return;
+  }
+
+  // Phone validation
+  const phonePattern = /^\+?\d{10,15}$/;
+  if (!phonePattern.test(phone.value)) {
+    alert('Please enter a valid phone number (10-15 digits, optional +).');
+    e.preventDefault();
+    return;
+  }
+});
 </script>
 
 </body>

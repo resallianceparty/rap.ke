@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Party Organs - RAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Highlights - RAP</title>
   <link rel="stylesheet" href="styles/rap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -167,17 +168,18 @@
 
   <main class="section">
     <div class="content">
-      <h1>Party Organs</h1>
-      <ul>
-        <li>National Delegates Congress</li>
-        <li>National Governing Council</li>
-        <li>National Executive Committee</li>
-        <li>National Secretariat</li>
-        <li>County Congress</li>
-        <li>Sub-County/Constituency Branch</li>
-        <li>Ward Branch</li>
-        <li>Party Caucuses (Women, Youth, Diaspora, Disability, etc.)</li>
-      </ul>
+      <h2>Latest Highlights</h2>
+
+      <!-- Static sample content for now -->
+      <article class="highlight-card">
+        <h3>12 July 2025 – Youth in Governance Initiative</h3>
+        <p>RAP launches a youth-centered governance program in Kisumu County...</p>
+      </article>
+
+      <article class="highlight-card">
+        <h3>6 July 2025 – RAP Constitution Submission</h3>
+        <p>The RAP Constitution has officially been submitted to ORPP...</p>
+      </article>
     </div>
   </main>
 
@@ -233,8 +235,25 @@
       </div>
     </div>
 
+    <!-- Placeholder for Admin Posting -->
+<!-- Show this form only to logged-in users (to be handled via backend) -->
+<form class="admin-post-form" style="display:none;">
+  <input type="text" placeholder="Title" required />
+  <textarea placeholder="Content" required></textarea>
+  <button type="submit" class="btn-primary">Post</button>
+</form>
+
+
   </div>
 </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
 
   <script>
   // Toggle entire mobile menu

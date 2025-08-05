@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RAP Manifesto</title>
   <link rel="stylesheet" href="styles/rap.css" />
+  <link rel="stylesheet" href="styles/color-themes.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
@@ -14,23 +15,22 @@
       <div class="logo-area">
         <a  href="index.html"> <img src="assets/logo.png" alt="RAP Logo" class="logo-img"/> </a>
         
+
       </div>
       <nav class="main-nav">
         <a href="index.html">Home</a>
       
         <div class="dropdown">
-          <a href="about.html" class="dropdown-toggle">About ▾</a>
+
+          <a class="dropdown-toggle">About ▾</a>
           <div class="dropdown-menu">
+            <a href="about.html">About Us</a>
             <a href="vision.html">Vision</a>
-            <a href="mission.html">Mission</a>
-            <a href="founding.html">Founding</a>
-            <a href="core-values.html">Core Values</a>
-            <a href="slogan.html">Our Slogan</a>
-      
-            <!-- Nested dropdown begins -->
+                        <!-- Nested dropdown begins -->
             <div class="dropdown nested-dropdown">
-              <a href="party-organs.html" class="dropdown-toggle">Party Organs ▸</a>
+              <a class="dropdown-toggle">Party Organs ▸</a>
               <div class="dropdown-menu long-menu">
+                <a href="party-organs.html">Party Organs</a>
                 <a href="org-structure.html">RAP Organizational Structure</a>
                 <a href="ndc.html">National Delegates Convention (NDC)</a>
                 <a href="ngc.html">National Governing Council (NGC)</a>
@@ -54,24 +54,118 @@
               </div>
             </div>
             <!-- Nested dropdown ends -->
+            <a href="founding.html">Founding</a>
+            <a href="core-values.html">Core Values</a>
+            <a href="slogan.html">Our Slogan</a>
+      
           </div>
         </div>
       
         <a href="ideology.html">Ideology</a>
         <a href="manifesto.html">Manifesto</a>
-        <a href="resource-centre.html">Resource Centre</a>
+        <!-- Resource Centre Dropdown -->
+        <div class="dropdown">
+          <a class="dropdown-toggle">Resource Centre ▾</a>
+          <div class="dropdown-menu">
+            <a href="documents.html">Documents & Downloads</a>
+            <a href="tenders.html">Tenders</a>
+            <a href="careers.html">Careers & Jobs</a>
+          </div>
+        </div>
         <a href="get-involved.html">Get Involved</a>
-        <a href="news.html">News & Updates</a>
+        <!-- News & Publications Dropdown -->
+        <div class="dropdown">
+          <a class="dropdown-toggle">News & Publications ▾</a>
+          <div class="dropdown-menu">
+          <a href="latest-highlights.html">Latest Highlights</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="media-releases.html">Media Releases</a>
+          <a href="events.html">Events</a>
+          <a href="reports.html">Reports</a>
+          <a href="public-notices.html">Public Notices</a>
+        </div>
+</div>
+
         <a href="contact.html">Contact</a>
+
       </nav>
-      
-    
 
+        <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
 
+    <nav id="mobileNav" class="mobile-nav">
+  <a href="index.html">Home</a>
 
-<a href="get-involved.html" class="enroll-button">Enroll</a>
+  <!-- About Dropdown -->
+  <div class="mobile-dropdown">
+    <button class="dropdown-btn">About ▾</button>
+    <div class="dropdown-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="vision.html">Vision</a>
+      <a href="founding.html">Founding</a>
+      <a href="core-values.html">Core Values</a>
+      <a href="slogan.html">Our Slogan</a>
+
+      <!-- Nested Party Organs Dropdown -->
+      <div class="mobile-dropdown nested">
+        <button class="dropdown-btn">Party Organs ▸</button>
+        <div class="dropdown-content">
+          <a href="org-structure.html">RAP Organizational Structure</a>
+          <a href="ndc.html">National Delegates Convention (NDC)</a>
+          <a href="ngc.html">National Governing Council (NGC)</a>
+          <a href="nac.html">National Advisory Council (NAC)</a>
+          <a href="nec.html">RAP NEC</a>
+          <a href="national-secretariat.html">RAP National Secretariat (NS)</a>
+          <a href="nec-support.html">RAP NEC Support Committees</a>
+          <a href="nenb.html">National Elections and Nominations Board (NENB)</a>
+          <a href="rdc.html">Regional Delegates Convention (RDC)</a>
+          <a href="cdc.html">County Delegates Convention (CDC)</a>
+          <a href="rwl.html">RAP Women League (RWL)</a>
+          <a href="ryl.html">RAP Youth League (RYL)</a>
+          <a href="rel.html">RAP Elders League (REL)</a>
+          <a href="ril.html">RAP Interfaith League (RIL)</a>
+          <a href="rsigl.html">RAP SIG League (RSIGL)</a>
+          <a href="dlc.html">RAP Diaspora League Chapter (DLC)</a>
+          <a href="bec.html">Branch Executive Committees (BEC)</a>
+          <a href="sbec.html">Sub-Branch Executive Committees (SBEC)</a>
+          <a href="wec.html">Ward Executive Committees (WEC)</a>
+          <a href="pcec.html">Polling Centre Executive Committee (PCEC)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="ideology.html">Ideology</a>
+  <a href="manifesto.html">Manifesto</a>
+
+<div class="mobile-dropdown">
+  <button class="dropdown-btn">Resource Centre ▾</button>
+  <div class="dropdown-content">
+    <a href="documents.html">Documents & Downloads</a>
+    <a href="tenders.html">Tenders</a>
+    <a href="careers.html">Careers & Jobs</a>
+  </div>
+</div>
+  <a href="get-involved.html">Get Involved</a>
+<div class="mobile-dropdown">
+  <button class="dropdown-btn">News & Publications ▾</button>
+  <div class="dropdown-content">
+    <a href="latest-highlights.html">Latest Highlights</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="media-releases.html">Media Releases</a>
+    <a href="events.html">Events</a>
+    <a href="reports.html">Reports</a>
+    <a href="public-notices.html">Public Notices</a>
+  </div>
+</div>
+
+  <a href="contact.html">Contact</a>
+</nav>
 
   </header>
+
   <div class="page-wrapper animate-home"> <!-- animate-home changes per page -->
     <!-- Your header + content + footer -->
   </div>
@@ -82,37 +176,42 @@
       <h2>Our Manifesto</h2>
       <p>The RAP Manifesto is structured around <strong>Five Pillars of Restoration and Progressive Transformation</strong> which guide our plans for Kenya’s future.</p>
 
+<div class="manifesto-image-wrapper">
+  <img src="assets/RAP The Nation of Opportunities pictures1.png" alt="nation picture" class="manifesto-pic">
+</div>
+
+
       <div class="pillar-grid">
         <div class="pillar-card blue">
           <div class="pillar-icon">1</div>
-          <h3>Creating Opportunities & Restoring Hope</h3>
+          <h2>Creating Opportunities & Restoring Hope</h2>
           <p>RAP champions sustainable, people-driven development by promoting job creation, industrialization, and agricultural modernization. We prioritize inclusive economic policies that ensure every Kenyan has the opportunity to achieve economic success, self-sufficiency, and a fulfilling life.</p>
         </div>
       
         <div class="pillar-card gold">
           <div class="pillar-icon">2</div>
-          <h3>Deepening Economic Growth with Agility</h3>
+          <h2>Deepening Economic Growth with Agility</h2>
           <p>RAP is committed to building a robust, diversified economy by fostering an environment that supports private sector growth, local enterprise, and foreign investment. Through strategic investment in ICT and innovation, we aim to make Kenya globally competitive, encouraging technological advancements that drive economic transformation and modern public services.</p>
         </div>
       
         <div class="pillar-card red">
           <div class="pillar-icon">3</div>
-          <h3>Strengthening Financial Sector Capacity</h3>
+          <h2>Strengthening Financial Sector Capacity</h2>
           <p>RAP envisions Kenya as Africa’s premier financial and trade hub. By enhancing financial systems, RAP aims to attract foreign direct investment to accelerate economic recovery and sustainable growth, positioning Kenya as a leader in liberal financial markets within Africa.</p>
         </div>
       
         <div class="pillar-card white">
           <div class="pillar-icon">4</div>
-          <h3>Pioneering Resilience and Unity</h3>
+          <h2>Pioneering Resilience and Unity</h2>
           <p>RAP values Kenya’s cultural, ethnic, and regional diversity, seeing it as a cornerstone of national strength. We promote national unity through reconciliation and inclusivity, empowering youth and women, while ensuring equal representation and active participation in Kenya’s governance and leadership.</p>
         </div>
       </div>
       
       <!-- Wrap the fifth pillar on its own row -->
 
-        <div class="pillar-card blue">
+        <div class="pillar-card gold">
           <div class="pillar-icon">5</div>
-          <h3>Stewardship in Governance</h3>
+          <h2>Stewardship in Governance</h2>
           <p>Guided by principles of dignity, integrity, and servant leadership, RAP promotes accountable, people-centered leadership that builds public trust, enhances transparency, and delivers quality services. We are committed to eradicating corruption in all its forms, enforcing strict anti-corruption measures, and upholding the rule of law to protect public resources. RAP also advocates for environmental sustainability, land reforms, and responsible management of Kenya’s natural resources, preserving our heritage for future generations.</p>
         </div>
 
@@ -126,36 +225,60 @@
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-left">
-        <h2>Restoration Alliance Party 2025</h2>
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Branding / Contact Section -->
+    <div class="footer-section footer-left">
+      <h3>Restoration Alliance Party 2025</h3>
+      <div class="contact-info">
         <p>Visit Us: Kose Heights, Argwings Kodhek Rd, Kilimani, Nairobi</p>
-        <p>Email: info@rap.or.ke | Phone: +254-707-7995-14</p>
+        <p>Email: <a href="mailto:info@rap.or.ke">info@rap.or.ke</a></p>
+        <p>Phone: +254-722-7814-04</p>
       </div>
-
-
-      <div class="footer-right">
-        <ul class="footer-links">
-          <p><a href="privacy-policy.html">Privacy Policy | </a>   <a href="terms-of-use.html">Terms of Use</a></p>
-          <p></p>
-        </ul>
-      </div>
-  
-      <div class="footer-center">
-        <div class="social-icons">
-          <a href="#" aria-label="X/Twitter" target="_blank"><i class="fab fa-x-twitter"></i></a>
-          <a href="#" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-        </div>
-      </div>
-  
-
     </div>
-  </footer>
+
+    <!-- Quick Links Section -->
+    <div class="footer-section footer-quicklinks">
+      <h3>Quick Links</h3>
+      <ul>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="about.html">About</a></p>
+        <p><a href="ideology.html">Ideology</a></p>
+        <p><a href="manifesto.html">Manifesto</a></p>
+        <p><a href="resource-centre.html">Resource Centre</a></p>
+        <p><a href="get-involved.html">Get Involved</a></p>
+        <p><a href="news.html">News & Publications</a></p>
+        <p><a href="contact.html">Contact</a></p>
+      </ul>
+    </div>
+
+    <!-- Legal Information Section -->
+    <div class="footer-section footer-legal">
+      <h3>Legal Information</h3>
+      <ul>
+        <p><a href="privacy-policy.html">Privacy Policy</a></p>
+        <p><a href="terms-of-use.html">Terms of Use</a></p>
+        <p><a href="submission.html">Submission Terms</a></p>
+        <p><a href="submission.html">Membership conditions</a></p>
+      </ul>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="footer-section footer-socials">
+      <h3>Socials</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
 
   <script>
     function toggleMenu() {
@@ -163,5 +286,26 @@
       menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
     }
   </script>
+
+<script>
+  // Toggle entire mobile menu
+  function toggleMenu() {
+    const menu = document.getElementById('mobileNav');
+    menu.classList.toggle('open');
+  }
+
+  // Handle dropdown toggles inside mobile nav
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButtons = document.querySelectorAll(".mobile-dropdown .dropdown-btn");
+
+    dropdownButtons.forEach(button => {
+      button.addEventListener("click", function () {
+        this.parentElement.classList.toggle("open");
+      });
+    });
+  });
+</script>
+
+
 </body>
 </html>

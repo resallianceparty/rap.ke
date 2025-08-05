@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Party Organs - RAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Highlights - RAP</title>
   <link rel="stylesheet" href="styles/rap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -165,19 +166,45 @@
 
   </header>
 
+ <!-- Content -->
   <main class="section">
     <div class="content">
-      <h1>Party Organs</h1>
-      <ul>
-        <li>National Delegates Congress</li>
-        <li>National Governing Council</li>
-        <li>National Executive Committee</li>
-        <li>National Secretariat</li>
-        <li>County Congress</li>
-        <li>Sub-County/Constituency Branch</li>
-        <li>Ward Branch</li>
-        <li>Party Caucuses (Women, Youth, Diaspora, Disability, etc.)</li>
-      </ul>
+      <h2>Public Notices</h2>
+      <p>Stay updated on important alerts, regulatory notices, and key announcements from RAP.</p>
+
+      <!-- Urgent Notice Banner -->
+      <div class="urgent-notice">
+        <i class="fas fa-exclamation-circle"></i>
+        <span>URGENT: Membership verification deadline extended to 30th September 2025.</span>
+      </div>
+
+      <!-- Notices List -->
+      <div class="notices-list">
+        <div class="notice-card">
+          <h3>ORPP Provisional Registration Notice</h3>
+          <p>This is the Office of the Regitrar of Political Parties Provisional Registration Notice.</p>
+          <a href="assets/RAP _ORPP PROVISIONAL REGISTRATION NOTICE.webp" download class="btn-download red">Download Notice</a>
+        </div>
+
+        <div class="notice-card">
+          <h3>ORPP Provisional Registration Notice</h3>
+          <p>This is the Office of the Regitrar of Political Parties Provisional Registration Notice (KISWAHILI).</p>
+          <a href="assets/RAP _ORPP PROVISIONAL REGISTRATION NOTICE(SWAHILI).webp" download class="btn-download red">Download Notice</a>
+        </div>
+      </div>
+
+      <p class="note">[CMS Hook: Public Notices will be updated dynamically via database]</p>
+
+      <!-- Hidden Admin Form -->
+      <div class="admin-form hidden">
+        <h3>Post New Public Notice</h3>
+        <form>
+          <input type="text" placeholder="Notice Title" required>
+          <textarea placeholder="Notice Details" required></textarea>
+          <input type="file" accept=".pdf" required>
+          <button type="submit" class="btn-primary">Upload Notice</button>
+        </form>
+      </div>
     </div>
   </main>
 
@@ -235,6 +262,14 @@
 
   </div>
 </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
 
   <script>
   // Toggle entire mobile menu

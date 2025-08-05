@@ -1,0 +1,99 @@
+/* ===========================================
+   Restoration Alliance Party (RAP) Theme
+   =========================================== */
+
+   :root {
+    /* Primary Brand Colors */
+    --rap-blue: rgb(0, 102, 179);         /* Logo text & glasses */
+    --rap-red: rgb(221, 32, 32);          /* "RAP" + slogan */
+    --rap-gold: rgb(179, 140, 57);        /* Outer ring */
+    --rap-white: rgb(255, 255, 255);      /* Background */
+  
+    /* Utility Shades */
+    --rap-light-blue: rgb(173, 216, 255); /* Hover/active backgrounds */
+    --rap-dark-blue: rgb(0, 71, 125);
+    --rap-light-gray: rgb(240, 240, 240);
+    --rap-dark-gray: rgb(60, 60, 60);
+  
+    /* Contrast & Alerts */
+    --contrast-text: #000;
+    --high-contrast-bg: #fff;
+    --danger-red: rgb(200, 0, 0);
+    --success-green: rgb(0, 140, 60);
+  }
+  
+  /* ==========================
+     Typography + UI Elements
+     ========================== */
+  
+  body {
+    background-color: var(--rap-white);
+    color: var(--contrast-text);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--rap-blue);
+  }
+  
+  a {
+    color: var(--rap-blue);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--rap-red);
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: var(--rap-blue);
+    color: var(--rap-white);
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--rap-dark-blue);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--rap-gold);
+    color: var(--rap-white);
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #a27e33;
+    transform: translateY(-2px);
+  }
+  
+  /* Highlighted Cards or Sections */
+  .card-highlight {
+    border-left: 5px solid var(--rap-red);
+    background-color: var(--rap-light-gray);
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Accent Borders */
+  .border-gold {
+    border: 2px solid var(--rap-gold);
+  }
+  
+  .text-red {
+    color: var(--rap-red);
+  }
+  
+  .text-blue {
+    color: var(--rap-blue);
+  }
+  

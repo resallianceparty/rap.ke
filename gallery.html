@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Party Organs - RAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Highlights - RAP</title>
   <link rel="stylesheet" href="styles/rap.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
@@ -165,19 +166,43 @@
 
   </header>
 
+  <!-- Content -->
   <main class="section">
     <div class="content">
-      <h1>Party Organs</h1>
-      <ul>
-        <li>National Delegates Congress</li>
-        <li>National Governing Council</li>
-        <li>National Executive Committee</li>
-        <li>National Secretariat</li>
-        <li>County Congress</li>
-        <li>Sub-County/Constituency Branch</li>
-        <li>Ward Branch</li>
-        <li>Party Caucuses (Women, Youth, Diaspora, Disability, etc.)</li>
-      </ul>
+      <h2>Gallery</h2>
+      <p>Explore moments captured from our events, campaigns, and activities nationwide.</p>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="assets/sample1.jpg" alt="RAP Event 1">
+          <p class="caption">Youth in Governance Workshop</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/sample2.jpg" alt="RAP Event 2">
+          <p class="caption">Community Outreach Program</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/sample3.jpg" alt="RAP Event 3">
+          <p class="caption">Leadership Training Session</p>
+        </div>
+        <div class="gallery-item">
+          <img src="assets/sample4.jpg" alt="RAP Event 4">
+          <p class="caption">Volunteer Mobilization Event</p>
+        </div>
+      </div>
+
+      <p class="note">[CMS Hook: Media gallery to be dynamically updated from the database]</p>
+
+      <!-- Hidden Admin Upload Form Placeholder -->
+      <div class="admin-form hidden">
+        <h3>Upload New Media</h3>
+        <form>
+          <input type="file" required>
+          <input type="text" placeholder="Caption" required>
+          <button type="submit" class="btn-primary">Upload</button>
+        </form>
+      </div>
     </div>
   </main>
 
@@ -233,8 +258,20 @@
       </div>
     </div>
 
+
+</div>
+
+
   </div>
 </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileNav');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
 
   <script>
   // Toggle entire mobile menu
