@@ -1,0 +1,46 @@
+/* Panel hidden by default */
+.accessibility-panel {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border: 2px solid #023e8a; /* RAP blue */
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+  height: 250px;
+  display: none;
+  z-index: 3000;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.accessibility-panel.open {
+  display: block;
+}
+
+.accessibility-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #023e8a;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 3001;
+}
+
+/* High contrast mode */
+.high-contrast {
+  filter: contrast(1.5);
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}

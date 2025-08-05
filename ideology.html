@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RAP Ideology</title>
   <link rel="stylesheet" href="styles/rap.css" />
+  <link rel="stylesheet" href="styles/accessibility.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
@@ -162,6 +163,32 @@
 
   <a href="contact.html">Contact</a>
 </nav>
+
+  <div id="accessibilityPanel" class="accessibility-panel">
+  <h3>Accessibility</h3>
+
+  <div class="access-option">
+    <i class="fas fa-text-height"></i>
+    <button onclick="adjustFontSize('increase')">A+</button>
+    <button onclick="adjustFontSize('decrease')">A-</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-adjust"></i>
+    <button onclick="toggleContrast()">High Contrast</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-moon"></i>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+  <div class="access-option brightness-control">
+    <i class="fas fa-sun"></i>
+    <input type="range" id="brightnessSlider" min="50" max="150" value="100" />
+  </div>
+</div>
+
 
   </header>
   
@@ -396,7 +423,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-
+<script src="scripts/accessibillityu.js"></script>
 
 
 </body>

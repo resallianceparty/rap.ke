@@ -52,3 +52,4 @@ document.querySelectorAll('.mobile-dropdown .dropdown-btn').forEach(btn => {
 function toggleMenu() {
   document.getElementById('mobileNav').classList.toggle('open');
 }
+
