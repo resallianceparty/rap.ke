@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Latest Highlights - RAP</title>
-  <link rel="stylesheet" href="styles/rap.css" />
-  <link rel="stylesheet" href="styles/accessibility.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resign / Check Status - RAP</title>
+  <link rel="stylesheet" href="styles/rap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- Header -->
   <!-- START HEADER -->
   <header class="header">
@@ -225,38 +223,39 @@
 
   </header>
 
-  <!-- Content -->
+  <!-- Main Content -->
   <main class="section">
-    <div class="content">
-      <h2>Media Releases</h2>
-      <p>Stay updated with RAP’s official press statements and announcements.</p>
+    <div class="content resign-status-content">
+      <h1>Resign or Check Your Membership Status</h1>
+      <p>If you need to resign from RAP or verify your political party membership status, follow the simple USSD steps below:</p>
 
-      <ul class="media-list">
-        <li>
-          <span class="media-date">12 July 2025</span>
-          <a href="#" class="media-link">Press Statement: Youth in Governance Initiative</a>
-        </li>
-        <li>
-          <span class="media-date">06 July 2025</span>
-          <a href="#" class="media-link">Speech: RAP’s Vision for Inclusive Economic Growth</a>
-        </li>
-        <li>
-          <span class="media-date">28 June 2025</span>
-          <a href="#" class="media-link">Interview: Founding Member on Party Strategy</a>
-        </li>
-      </ul>
+      <section class="ussd-instructions">
+        <h2>Check Status / Resign via USSD</h2>
+        <ol>
+          <li>Dial <strong>*509#</strong> on your phone.</li>
+          <li>Select <strong>Review</strong> option.</li>
+          <li>Enter your <strong>First Name</strong>.</li>
+          <li>Enter your <strong>ID Number</strong>.</li>
+          <li>You will receive a <strong>4-digit PIN</strong>.</li>
+          <li>Dial <strong>*509#</strong> again and enter the PIN.</li>
+          <li>Select your <strong>Security Word</strong> and confirm.</li>
+          <li>Log in again with <strong>*509#</strong> and PIN.</li>
+          <li>Select <strong>Membership</strong> to confirm your status.</li>
+          <li>If you wish to resign, select <strong>Resign</strong> option.</li>
+        </ol>
+      </section>
 
-      <!-- <p class="note">[CMS Hook: Dynamic list of media releases to be populated here]</p> -->
+      <section class="manual-resignation">
+        <h2>Manual Resignation</h2>
+        <p>You can resign manually by downloading and completing the official resignation form:</p>
+        <a href="documents/FORM PPM 5_POLITICAL PARTY RESIGNATION FORM.pdf" class="btn-primary" download>Download FORM</a>
+        <p>Once completed, email it to the attention of the <strong>RAP Secretary General</strong>.</p>
+      </section>
 
-      <!-- Hidden Admin Form -->
-      <div class="admin-form hidden">
-        <h3>Upload New Media Release</h3>
-        <form>
-          <input type="text" placeholder="Title" required>
-          <textarea placeholder="Description or link" required></textarea>
-          <button type="submit" class="btn-primary">Upload</button>
-        </form>
-      </div>
+      <section class="manual-registration">
+        <h2>Manual Registration</h2>
+        <p>You can also register through a RAP Recruitment Agent in your area. Check the sample manual registration form under the <a href="documents.html">Resources</a> section.</p>
+      </section>
     </div>
   </main>
 

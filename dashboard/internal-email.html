@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internal Email - RAP Dashboard</title>
+  <link rel="stylesheet" href="../styles/rap.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+
+        <button class="hamburger" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <img src="../assets/logo.png" alt="RAP Logo" class="sidebar-logo">
+        <h2>RAP Dashboard</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="internal-email.html">
+            <i class="fas fa-envelope"></i> Internal Email 
+            <span class="badge" id="unread-count">3</span>
+        </a>
+        <a href="profile.html"><i class="fas fa-user"></i> Profile</a>
+        <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <h1>Internal Email</h1>
+      </header>
+
+      <!-- Tabs for Inbox/Sent/Compose -->
+      <div class="email-tabs">
+        <button class="tab-btn active" data-tab="inbox">Inbox</button>
+        <button class="tab-btn" data-tab="sent">Sent</button>
+        <button class="tab-btn" data-tab="compose">Compose</button>
+      </div>
+
+      <button class="compose-float-btn" onclick="openComposeModal()">+ Compose</button>
+
+<!-- Compose Modal -->
+<div id="compose-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeComposeModal()">&times;</span>
+    <h2>Compose New Message</h2>
+    <form id="modal-compose-form">
+      <label for="modal-to">To</label>
+      <input type="email" id="modal-to" required>
+
+      <label for="modal-subject">Subject</label>
+      <input type="text" id="modal-subject-input" required>
+
+      <label for="modal-message">Message</label>
+      <textarea id="modal-message" rows="6" required></textarea>
+
+      <button type="submit" class="btn-primary">Send</button>
+    </form>
+  </div>
+</div>
+
+
+      <!-- Inbox -->
+      <div class="tab-content active" id="inbox">
+        <h2>Inbox</h2>
+        <table class="email-table">
+          <thead>
+            <tr>
+              <th>From</th>
+              <th>Subject</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>admin@rap.or.ke</td>
+              <td>Welcome to RAP</td>
+              <td>2025-08-05</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Sent -->
+      <div class="tab-content" id="sent">
+        <h2>Sent Items</h2>
+        <table class="email-table">
+          <thead>
+            <tr>
+              <th>To</th>
+              <th>Subject</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>john@rap.or.ke</td>
+              <td>Meeting Update</td>
+              <td>2025-08-01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Message View Modal -->
+<div id="message-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2 id="modal-subject">Message Subject</h2>
+    <p><strong>From:</strong> <span id="modal-from"></span></p>
+    <p><strong>To:</strong> <span id="modal-to"></span></p>
+    <p><strong>Date:</strong> <span id="modal-date"></span></p>
+    <div id="modal-body" class="modal-body">
+      <p>Message content goes here.</p>
+    </div>
+  </div>
+</div>
+
+
+      <!-- Compose -->
+      <div class="tab-content" id="compose">
+        <h2>Compose Email</h2>
+        <form action="#" method="post" id="compose-form">
+          <label for="to">To</label>
+          <input type="email" id="to" name="to" required>
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <label for="attachment">Attachment (optional)</label>
+          <input type="file" id="attachment" name="attachment">
+
+          <button type="submit" class="btn-primary">Send</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Tab switching
+    document.addEventListener('DOMContentLoaded', function() {
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(tc => tc.classList.remove('active'));
+
+          btn.classList.add('active');
+          document.getElementById(btn.dataset.tab).classList.add('active');
+        });
+      });
+
+      // Placeholder login check
+      const isLoggedIn = false; // Set true when backend is ready
+      if (!isLoggedIn) {
+        alert("You must be logged in to access this page.");
+        window.location.href = "../login.html";
+      }
+    });
+  </script>
+
+  <script>
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('open');
+}
+
+// Placeholder login/session check
+document.addEventListener("DOMContentLoaded", () => {
+  const isLoggedIn = false; // Set true when backend is ready
+  if (!isLoggedIn) {
+    alert("You must be logged in to access this dashboard.");
+    window.location.href = "../login.html";
+  }
+});
+</script>
+
+<script>
+// Future: Fetch Inbox messages from DB
+// Example: fetch('/api/getInbox.php').then(res => res.json()).then(renderInbox);
+
+// Future: Fetch Sent messages from DB
+// Example: fetch('/api/getSent.php').then(res => res.json()).then(renderSent);
+
+// Future: Send email to DB
+document.getElementById('compose-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // TODO: POST form data to send_email.php
+  alert('Email sending logic will go here.');
+});
+</script>
+
+<script>
+// Open modal on row click
+document.querySelectorAll('.email-table tbody tr').forEach(row => {
+  row.addEventListener('click', () => {
+    // Example: populate modal with row data
+    document.getElementById('modal-subject').textContent = row.cells[1].textContent;
+    document.getElementById('modal-from').textContent = row.cells[0].textContent;
+    document.getElementById('modal-date').textContent = row.cells[2].textContent;
+    document.getElementById('modal-to').textContent = 'You'; // Placeholder
+    document.getElementById('modal-body').innerHTML = '<p>Full message content placeholder</p>';
+
+    document.getElementById('message-modal').style.display = 'flex';
+  });
+});
+
+// Close modal
+document.querySelector('.close-btn').addEventListener('click', () => {
+  document.getElementById('message-modal').style.display = 'none';
+});
+
+// Close modal on outside click
+window.addEventListener('click', e => {
+  if (e.target.id === 'message-modal') {
+    document.getElementById('message-modal').style.display = 'none';
+  }
+});
+</script>
+
+<script>
+function openComposeModal() {
+  document.getElementById('compose-modal').style.display = 'flex';
+}
+function closeComposeModal() {
+  document.getElementById('compose-modal').style.display = 'none';
+}
+
+// Handle send (placeholder)
+document.getElementById('modal-compose-form').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Message sent (DB logic coming soon).');
+  closeComposeModal();
+});
+</script>
+
+
+</body>
+</html>

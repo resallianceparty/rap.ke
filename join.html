@@ -11,6 +11,7 @@
 <body>
 
   <!-- Header -->
+  <!-- START HEADER -->
   <header class="header">
     <div class="container">
       <div class="logo-area">
@@ -73,7 +74,23 @@
             <a href="careers.html">Careers & Jobs</a>
           </div>
         </div>
-        <a href="get-involved.html">Get Involved</a>
+
+<div class="dropdown">
+  <a class="dropdown-toggle" aria-label="Get Involved Menu">Get Involved ▾</a>
+
+  <div class="dropdown-menu">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+        
         <!-- News & Publications Dropdown -->
         <div class="dropdown">
           <a class="dropdown-toggle">News & Publications ▾</a>
@@ -87,7 +104,7 @@
         </div>
 </div>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
 
       </nav>
 
@@ -149,7 +166,22 @@
     <a href="careers.html">Careers & Jobs</a>
   </div>
 </div>
-  <a href="get-involved.html">Get Involved</a>
+
+<div class="mobile-dropdown">
+ <button class="dropdown-btn" aria-label="Toggle Get Involved Menu">Get Involved ▾</button>
+  <div class="dropdown-content">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+
 <div class="mobile-dropdown">
   <button class="dropdown-btn">News & Publications ▾</button>
   <div class="dropdown-content">
@@ -165,6 +197,32 @@
   <a href="contact.html">Contact</a>
 </nav>
 
+  <div id="accessibilityPanel" class="accessibility-panel">
+  <h3>Accessibility</h3>
+
+  <div class="access-option">
+    <i class="fas fa-text-height"></i>
+    <button onclick="adjustFontSize('increase')">A+</button>
+    <button onclick="adjustFontSize('decrease')">A-</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-adjust"></i>
+    <button onclick="toggleContrast()">High Contrast</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-moon"></i>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+  <div class="access-option brightness-control">
+    <i class="fas fa-sun"></i>
+    <input type="range" id="brightnessSlider" min="50" max="150" value="100" />
+  </div>
+</div>
+
+
   </header>
 
 <main class="section">
@@ -172,15 +230,23 @@
     <h2>Join the Movement for a Restored Kenya!</h2>
     <p>Be part of "The Nation of Opportunities" and help restore and transform Kenya. Fill in your details below to register as a member.</p>
 
-    
+<div class="membership-links">
+  <a href="why-join.html" class="membership-link">
+    <i class="fas fa-info-circle"></i> Why Join RAP
+  </a>
+  <a href="memberz.html" class="membership-link">
+    <i class="fas fa-users"></i> RAP Membership
+  </a>
+</div>
+
 <div class="language-toggle-container">
   <div class="language-switch">
-    <span id="languageLabel">EN</span>
+    <span id="languageLabel">ENGLISH</span>
     <label class="switch">
       <input type="checkbox" id="languageToggle">
       <span class="slider"></span>
     </label>
-    <span id="languageLabel">SW</span>
+    <span id="languageLabel">SWAHILI</span>
   </div>
 </div>
 
@@ -261,34 +327,50 @@
 
 
 <h3>Membership Category</h3>
-<div class="membership-options">
-  <label class="radio-option">
-    Regular Member <small>(Joining Fee: 0-100 KES, Annual: 100 KES)</small>
-    <input type="radio" name="membership_category" value="Regular Member" required>
-  </label>
+<table class="membership-options">
+  <tr>
+    <td>
+      <label class="radio-option">
+        Regular Member <small>(Joining Fee: 0-100 KES, Annual: 100 KES)</small>
+        <input type="radio" name="membership_category" value="Regular Member" required>
+      </label>
+    </td>
+    <td>
+      <label class="radio-option">
+        Life Member <small>(Joining Fee: 50,000 KES, Annual: 5,000 KES)</small>
+        <input type="radio" name="membership_category" value="Life Member">
+      </label>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label class="radio-option">
+        Honorary Member <small>(Joining Fee: 100,000 KES, Annual: 10,000 KES)</small>
+        <input type="radio" name="membership_category" value="Honorary Member">
+      </label>
+    </td>
+    <td>
+      <label class="radio-option">
+        Affiliate Member <small>(Joining Fee: 250,000 KES, Annual: 50,000 KES)</small>
+        <input type="radio" name="membership_category" value="Affiliate Member">
+      </label>
+    </td>
+  </tr>
+</table>
 
-  <label class="radio-option">
-    Life Member <small>(Joining Fee: 50,000 KES, Annual: 5,000 KES)</small>
-    <input type="radio" name="membership_category" value="Life Member">
-  </label>
-
-  <label class="radio-option">
-    Honorary Member <small>(Joining Fee: 100,000 KES, Annual: 10,000 KES)</small>
-    <input type="radio" name="membership_category" value="Honorary Member">
-  </label>
-
-  <label class="radio-option">
-    Affiliate Member <small>(Joining Fee: 250,000 KES, Annual: 50,000 KES)</small>
-    <input type="radio" name="membership_category" value="Affiliate Member">
-  </label>
-</div>
 
 
 
   <!-- Consent -->
 <h3>Consent & Acknowledgment</h3>
 <label class="checkbox-option">
-  I agree to the Terms and Privacy Policy of RAP.
+  <label>
+  I agree to the 
+  <a href="terms-of-use.html" target="_blank">Terms of Use</a> 
+  and 
+  <a href="privacy-policy.html" target="_blank">Privacy Policy</a> 
+  of RAP.
+</label>
   <input type="checkbox" name="consent" required>
 </label>
 
@@ -421,6 +503,7 @@ document.getElementById('languageToggle').addEventListener('click', function () 
 </main>
 
 <!-- Footer -->
+<!-- START FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -438,14 +521,11 @@ document.getElementById('languageToggle').addEventListener('click', function () 
     <div class="footer-section footer-quicklinks">
       <h3>Quick Links</h3>
       <ul>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
         <p><a href="ideology.html">Ideology</a></p>
         <p><a href="manifesto.html">Manifesto</a></p>
         <p><a href="resource-centre.html">Resource Centre</a></p>
         <p><a href="get-involved.html">Get Involved</a></p>
-        <p><a href="news.html">News & Publications</a></p>
-        <p><a href="contact.html">Contact</a></p>
+        <p><a href="latest-highlights.html">News & Publications</a></p>
       </ul>
     </div>
 
@@ -457,6 +537,7 @@ document.getElementById('languageToggle').addEventListener('click', function () 
         <p><a href="terms-of-use.html">Terms of Use</a></p>
         <p><a href="submission.html">Submission Terms</a></p>
         <p><a href="submission.html">Membership conditions</a></p>
+        <p><a href="faq.html">FAQ's</a></p>
       </ul>
     </div>
 
@@ -472,8 +553,16 @@ document.getElementById('languageToggle').addEventListener('click', function () 
       </div>
     </div>
 
+      <!-- Copyright Line -->
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2025 Restoration Alliance Party (RAP). All Rights Reserved. 
+      Site crafted by <a href="https://otaimedia.com" target="_blank">OtaiMedia</a>.
+    </p>
+
   </div>
 </footer>
 
 </body>
 </html>
+

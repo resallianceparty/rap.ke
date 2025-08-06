@@ -1,0 +1,65 @@
+/* Fullscreen background */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #001f54, #023e8a);
+}
+
+/* Card style */
+.login-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  color: #001f54;
+}
+
+/* Form inputs */
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #ffd700;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e6c200;
+}
+
+/* Register note */
+.login-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+.login-note a {
+  color: #023e8a;
+  text-decoration: underline;
+}

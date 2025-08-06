@@ -11,6 +11,7 @@
 <body>
 
   <!-- Header -->
+  <!-- START HEADER -->
   <header class="header">
     <div class="container">
       <div class="logo-area">
@@ -73,7 +74,23 @@
             <a href="careers.html">Careers & Jobs</a>
           </div>
         </div>
-        <a href="get-involved.html">Get Involved</a>
+
+<div class="dropdown">
+  <a class="dropdown-toggle" aria-label="Get Involved Menu">Get Involved ▾</a>
+
+  <div class="dropdown-menu">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+        
         <!-- News & Publications Dropdown -->
         <div class="dropdown">
           <a class="dropdown-toggle">News & Publications ▾</a>
@@ -87,7 +104,7 @@
         </div>
 </div>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
 
       </nav>
 
@@ -149,7 +166,22 @@
     <a href="careers.html">Careers & Jobs</a>
   </div>
 </div>
-  <a href="get-involved.html">Get Involved</a>
+
+<div class="mobile-dropdown">
+ <button class="dropdown-btn" aria-label="Toggle Get Involved Menu">Get Involved ▾</button>
+  <div class="dropdown-content">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+
 <div class="mobile-dropdown">
   <button class="dropdown-btn">News & Publications ▾</button>
   <div class="dropdown-content">
@@ -165,26 +197,77 @@
   <a href="contact.html">Contact</a>
 </nav>
 
+  <div id="accessibilityPanel" class="accessibility-panel">
+  <h3>Accessibility</h3>
+
+  <div class="access-option">
+    <i class="fas fa-text-height"></i>
+    <button onclick="adjustFontSize('increase')">A+</button>
+    <button onclick="adjustFontSize('decrease')">A-</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-adjust"></i>
+    <button onclick="toggleContrast()">High Contrast</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-moon"></i>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+  <div class="access-option brightness-control">
+    <i class="fas fa-sun"></i>
+    <input type="range" id="brightnessSlider" min="50" max="150" value="100" />
+  </div>
+</div>
+
+
   </header>
 
-  <main class="section">
-    <div class="content">
-      <h2>Latest Highlights</h2>
+<main class="section">
+  <div class="content">
+    <h2>Latest Highlights</h2>
 
-      <!-- Static sample content for now -->
-      <article class="highlight-card">
-        <h3>12 July 2025 – Youth in Governance Initiative</h3>
-        <p>RAP launches a youth-centered governance program in Kisumu County...</p>
-      </article>
+    <!-- Static sample content with media -->
+    <article class="highlight-card">
+      <h3>12 July 2025 – Youth in Governance Initiative</h3>
+      <img src="assets/sample-youth.jpg" alt="Youth in Governance" class="highlight-media">
+      <p>RAP launches a youth-centered governance program in Kisumu County with nationwide outreach plans.</p>
+    </article>
 
-      <article class="highlight-card">
-        <h3>6 July 2025 – RAP Constitution Submission</h3>
-        <p>The RAP Constitution has officially been submitted to ORPP...</p>
-      </article>
+    <article class="highlight-card">
+      <h3>6 July 2025 – RAP Constitution Submission</h3>
+      <video controls class="highlight-media">
+        <source src="assets/sample-constitution-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>The RAP Constitution has officially been submitted to ORPP, marking a major milestone in party formation.</p>
+    </article>
+
+    <!-- Hidden Admin Form -->
+    <div class="admin-form hidden">
+      <h3>Post New Highlight</h3>
+      <form>
+        <input type="text" placeholder="Highlight Title" required>
+        <textarea placeholder="Highlight Details" required></textarea>
+
+        <!-- File Uploads -->
+        <label>Upload Image</label>
+        <input type="file" accept="image/*">
+
+        <label>Upload Video</label>
+        <input type="file" accept="video/*">
+
+        <button type="submit" class="btn-primary">Upload Highlight</button>
+      </form>
     </div>
-  </main>
+  </div>
+</main>
+
 
 <!-- Footer -->
+<!-- START FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -202,14 +285,11 @@
     <div class="footer-section footer-quicklinks">
       <h3>Quick Links</h3>
       <ul>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
         <p><a href="ideology.html">Ideology</a></p>
         <p><a href="manifesto.html">Manifesto</a></p>
         <p><a href="resource-centre.html">Resource Centre</a></p>
         <p><a href="get-involved.html">Get Involved</a></p>
-        <p><a href="news.html">News & Publications</a></p>
-        <p><a href="contact.html">Contact</a></p>
+        <p><a href="latest-highlights.html">News & Publications</a></p>
       </ul>
     </div>
 
@@ -221,6 +301,7 @@
         <p><a href="terms-of-use.html">Terms of Use</a></p>
         <p><a href="submission.html">Submission Terms</a></p>
         <p><a href="submission.html">Membership conditions</a></p>
+        <p><a href="faq.html">FAQ's</a></p>
       </ul>
     </div>
 
@@ -236,17 +317,28 @@
       </div>
     </div>
 
-    <!-- Placeholder for Admin Posting -->
-<!-- Show this form only to logged-in users (to be handled via backend) -->
-<form class="admin-post-form" style="display:none;">
-  <input type="text" placeholder="Title" required />
-  <textarea placeholder="Content" required></textarea>
-  <button type="submit" class="btn-primary">Post</button>
-</form>
-
+      <!-- Copyright Line -->
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2025 Restoration Alliance Party (RAP). All Rights Reserved. 
+      Site crafted by <a href="https://otaimedia.com" target="_blank">OtaiMedia</a>.
+    </p>
 
   </div>
 </footer>
+
+<script>
+// Placeholder for file uploads
+document.querySelectorAll('.admin-form input[type="file"]').forEach(input => {
+  input.addEventListener('change', e => {
+    const file = e.target.files[0];
+    if(file) {
+      console.log("Selected file:", file.name);
+    }
+  });
+});
+</script>
+
 
   <script>
     function toggleMenu() {
@@ -279,3 +371,4 @@
 
 </body>
 </html>
+

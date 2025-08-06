@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Latest Highlights - RAP</title>
-  <link rel="stylesheet" href="styles/rap.css" />
-  <link rel="stylesheet" href="styles/accessibility.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join RAP League - RAP</title>
+  <link rel="stylesheet" href="styles/rap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- Header -->
   <!-- START HEADER -->
   <header class="header">
@@ -225,42 +223,109 @@
 
   </header>
 
-  <!-- Content -->
+  <!-- Main Content -->
   <main class="section">
-    <div class="content">
-      <h2>Media Releases</h2>
-      <p>Stay updated with RAP’s official press statements and announcements.</p>
+    <div class="content league-content">
+      <h1>Join a RAP League</h1>
+      <p>Be part of one of RAP’s specialized leagues and contribute to focused initiatives across the country.</p>
 
-      <ul class="media-list">
-        <li>
-          <span class="media-date">12 July 2025</span>
-          <a href="#" class="media-link">Press Statement: Youth in Governance Initiative</a>
-        </li>
-        <li>
-          <span class="media-date">06 July 2025</span>
-          <a href="#" class="media-link">Speech: RAP’s Vision for Inclusive Economic Growth</a>
-        </li>
-        <li>
-          <span class="media-date">28 June 2025</span>
-          <a href="#" class="media-link">Interview: Founding Member on Party Strategy</a>
-        </li>
-      </ul>
+      <!-- Leagues List -->
+      <section class="league-list">
+        <h2>Available RAP Leagues</h2>
+        <ul>
+          <li>RAP Women League (RWL)</li>
+          <li>RAP Youth League (RYL)</li>
+          <li>RAP Elders League (REL)</li>
+          <li>RAP Interfaith League (RIL)</li>
+          <li>RAP SIG League (RSIGL)</li>
+          <li>RAP Diaspora League Chapter (DLC)</li>
+        </ul>
+      </section>
 
-      <!-- <p class="note">[CMS Hook: Dynamic list of media releases to be populated here]</p> -->
+      <!-- Signup Form -->
+      <section class="league-signup">
+        <h2>Sign Up to Join a League</h2>
+        <form action="#" method="post" aria-label="Join RAP League Form">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required>
 
-      <!-- Hidden Admin Form -->
-      <div class="admin-form hidden">
-        <h3>Upload New Media Release</h3>
-        <form>
-          <input type="text" placeholder="Title" required>
-          <textarea placeholder="Description or link" required></textarea>
-          <button type="submit" class="btn-primary">Upload</button>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="county">County</label>
+<select id="county" name="county" required>
+  <option value="">-- Select County --</option>
+  <option value="Baringo">Baringo</option>
+  <option value="Bomet">Bomet</option>
+  <option value="Bungoma">Bungoma</option>
+  <option value="Busia">Busia</option>
+  <option value="Elgeyo Marakwet">Elgeyo Marakwet</option>
+  <option value="Embu">Embu</option>
+  <option value="Garissa">Garissa</option>
+  <option value="Homa Bay">Homa Bay</option>
+  <option value="Isiolo">Isiolo</option>
+  <option value="Kajiado">Kajiado</option>
+  <option value="Kakamega">Kakamega</option>
+  <option value="Kericho">Kericho</option>
+  <option value="Kiambu">Kiambu</option>
+  <option value="Kilifi">Kilifi</option>
+  <option value="Kirinyaga">Kirinyaga</option>
+  <option value="Kisii">Kisii</option>
+  <option value="Kisumu">Kisumu</option>
+  <option value="Kitui">Kitui</option>
+  <option value="Kwale">Kwale</option>
+  <option value="Laikipia">Laikipia</option>
+  <option value="Lamu">Lamu</option>
+  <option value="Machakos">Machakos</option>
+  <option value="Makueni">Makueni</option>
+  <option value="Mandera">Mandera</option>
+  <option value="Marsabit">Marsabit</option>
+  <option value="Meru">Meru</option>
+  <option value="Migori">Migori</option>
+  <option value="Mombasa">Mombasa</option>
+  <option value="Murang'a">Murang'a</option>
+  <option value="Nairobi">Nairobi</option>
+  <option value="Nakuru">Nakuru</option>
+  <option value="Nandi">Nandi</option>
+  <option value="Narok">Narok</option>
+  <option value="Nyamira">Nyamira</option>
+  <option value="Nyandarua">Nyandarua</option>
+  <option value="Nyeri">Nyeri</option>
+  <option value="Samburu">Samburu</option>
+  <option value="Siaya">Siaya</option>
+  <option value="Taita Taveta">Taita Taveta</option>
+  <option value="Tana River">Tana River</option>
+  <option value="Tharaka Nithi">Tharaka Nithi</option>
+  <option value="Trans Nzoia">Trans Nzoia</option>
+  <option value="Turkana">Turkana</option>
+  <option value="Uasin Gishu">Uasin Gishu</option>
+  <option value="Vihiga">Vihiga</option>
+  <option value="Wajir">Wajir</option>
+  <option value="West Pokot">West Pokot</option>
+</select>
+
+
+          <label for="league">Preferred League</label>
+          <select id="league" name="league" required>
+            <option value="">-- Select League --</option>
+            <option value="RWL">RAP Women League (RWL)</option>
+            <option value="RYL">RAP Youth League (RYL)</option>
+            <option value="REL">RAP Elders League (REL)</option>
+            <option value="RIL">RAP Interfaith League (RIL)</option>
+            <option value="RSIGL">RAP SIG League (RSIGL)</option>
+            <option value="DLC">RAP Diaspora League Chapter (DLC)</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Submit Application</button>
         </form>
-      </div>
+      </section>
     </div>
   </main>
 
-<!-- Footer -->
+ <!-- Footer -->
 <!-- START FOOTER -->
 <footer class="footer">
   <div class="footer-container">
@@ -349,7 +414,6 @@
 </script>
 
 <script src="scripts/accessibillityu.js"></script>
-
 </body>
 </html>
 

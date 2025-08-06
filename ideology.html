@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <!-- Header -->
+
+<!-- START HEADER -->
+  <!-- START HEADER -->
   <header class="header">
     <div class="container">
       <div class="logo-area">
@@ -72,7 +74,23 @@
             <a href="careers.html">Careers & Jobs</a>
           </div>
         </div>
-        <a href="get-involved.html">Get Involved</a>
+
+<div class="dropdown">
+  <a class="dropdown-toggle" aria-label="Get Involved Menu">Get Involved ▾</a>
+
+  <div class="dropdown-menu">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+        
         <!-- News & Publications Dropdown -->
         <div class="dropdown">
           <a class="dropdown-toggle">News & Publications ▾</a>
@@ -86,7 +104,7 @@
         </div>
 </div>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
 
       </nav>
 
@@ -148,7 +166,22 @@
     <a href="careers.html">Careers & Jobs</a>
   </div>
 </div>
-  <a href="get-involved.html">Get Involved</a>
+
+<div class="mobile-dropdown">
+ <button class="dropdown-btn" aria-label="Toggle Get Involved Menu">Get Involved ▾</button>
+  <div class="dropdown-content">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+
 <div class="mobile-dropdown">
   <button class="dropdown-btn">News & Publications ▾</button>
   <div class="dropdown-content">
@@ -191,6 +224,8 @@
 
 
   </header>
+
+  <!-- END HEADER -->
   
   <div class="page-wrapper animate-home"> <!-- animate-home changes per page -->
     <!-- Your header + content + footer -->
@@ -309,18 +344,12 @@
 </div>
 
 
-      <h3>RAP Party Ideology Implementation Strategy</h3>
-      <p>
-        To bring RAP’s transformative agenda of "the Nation of Opportunities" and its Sustainable Centrist Ideology to life, a detailed and actionable strategy is essential. This approach includes clear legislative priorities, initiatives, and timelines to transform RAP party’s ideology into tangible outcomes for Kenya’s socio-economic and political advancement. The RAP Ideology Implementation Strategy provides a roadmap to address the nation’s key challenges, focusing on economic empowerment, social welfare, governance, environmental sustainability, and national unity. Spanning from the anticipated government transition post-August 2027 elections through August 2037, the plan targets job creation, improved healthcare and education, climate change action, and enhanced governance, as outlined in the detailed RAP party ideology.
-      </p>
-      <h4>
-        For More Information Download:
-      </h4>
       <a href="documents/rap-ideology.pdf" download class="btn-download">The Full RAP Ideology</a>
     </div>
   </main>
 
-<!-- Footer -->
+<!-- START FOOTER -->
+<!-- START FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -338,14 +367,11 @@
     <div class="footer-section footer-quicklinks">
       <h3>Quick Links</h3>
       <ul>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
         <p><a href="ideology.html">Ideology</a></p>
         <p><a href="manifesto.html">Manifesto</a></p>
         <p><a href="resource-centre.html">Resource Centre</a></p>
         <p><a href="get-involved.html">Get Involved</a></p>
-        <p><a href="news.html">News & Publications</a></p>
-        <p><a href="contact.html">Contact</a></p>
+        <p><a href="latest-highlights.html">News & Publications</a></p>
       </ul>
     </div>
 
@@ -357,6 +383,7 @@
         <p><a href="terms-of-use.html">Terms of Use</a></p>
         <p><a href="submission.html">Submission Terms</a></p>
         <p><a href="submission.html">Membership conditions</a></p>
+        <p><a href="faq.html">FAQ's</a></p>
       </ul>
     </div>
 
@@ -372,8 +399,17 @@
       </div>
     </div>
 
+      <!-- Copyright Line -->
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2025 Restoration Alliance Party (RAP). All Rights Reserved. 
+      Site crafted by <a href="https://otaimedia.com" target="_blank">OtaiMedia</a>.
+    </p>
+
   </div>
 </footer>
+
+<!-- END FOOTER -->
 
   <script>
     function toggleMenu() {
@@ -402,29 +438,33 @@
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".accordion-item");
+document.addEventListener('DOMContentLoaded', function() {
+  const headers = document.querySelectorAll('.accordion-header');
 
-  items.forEach(item => {
-    const header = item.querySelector(".accordion-header");
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      // Toggle active state
+      header.classList.toggle('active');
 
-    header.addEventListener("click", () => {
-      // If this item is already active, close it
-      if (item.classList.contains("active")) {
-        item.classList.remove("active");
+      // Toggle content visibility
+      const content = header.nextElementSibling;
+      content.classList.toggle('open');
+
+      // Set proper height for animation
+      if (content.classList.contains('open')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
       } else {
-        // Close all other items
-        items.forEach(i => i.classList.remove("active"));
-        // Open this one
-        item.classList.add("active");
+        content.style.maxHeight = null;
       }
     });
   });
 });
 </script>
 
+
 <script src="scripts/accessibillityu.js"></script>
 
 
 </body>
 </html>
+

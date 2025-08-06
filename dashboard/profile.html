@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - RAP Dashboard</title>
+  <link rel="stylesheet" href="../styles/rap.css">
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+
+        <button class="hamburger" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <img src="../assets/logo.png" alt="RAP Logo" class="sidebar-logo">
+        <h2>RAP Dashboard</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="internal-email.html"><i class="fas fa-envelope"></i> Internal Email</a>
+        <a href="profile.html" class="active"><i class="fas fa-user"></i> Profile</a>
+        <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-content">
+      <header class="dashboard-header">
+        <h1>Your Profile</h1>
+      </header>
+      <section>
+        <p>Profile details placeholder. (Will show name, email, membership number once DB is connected)</p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('open');
+}
+
+// Placeholder login/session check
+document.addEventListener("DOMContentLoaded", () => {
+  const isLoggedIn = false; // Set true when backend is ready
+  if (!isLoggedIn) {
+    alert("You must be logged in to access this dashboard.");
+    window.location.href = "../login.html";
+  }
+});
+</script>
+
+<script>
+// Future: Fetch Inbox messages from DB
+// Example: fetch('/api/getInbox.php').then(res => res.json()).then(renderInbox);
+
+// Future: Fetch Sent messages from DB
+// Example: fetch('/api/getSent.php').then(res => res.json()).then(renderSent);
+
+// Future: Send email to DB
+document.getElementById('compose-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // TODO: POST form data to send_email.php
+  alert('Email sending logic will go here.');
+});
+</script>
+
+
+
+</body>
+</html>

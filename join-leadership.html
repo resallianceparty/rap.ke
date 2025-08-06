@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Latest Highlights - RAP</title>
-  <link rel="stylesheet" href="styles/rap.css" />
-  <link rel="stylesheet" href="styles/accessibility.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join RAP Leadership - RAP</title>
+  <link rel="stylesheet" href="styles/rap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
   <!-- Header -->
   <!-- START HEADER -->
   <header class="header">
@@ -225,38 +223,70 @@
 
   </header>
 
-  <!-- Content -->
+  <!-- Main Content -->
   <main class="section">
-    <div class="content">
-      <h2>Media Releases</h2>
-      <p>Stay updated with RAP’s official press statements and announcements.</p>
+    <div class="content leadership-content">
+      <h1>Join RAP Leadership</h1>
+      <p>Take a leadership role in shaping RAP’s direction by joining one of the party’s organs or support committees.</p>
 
-      <ul class="media-list">
-        <li>
-          <span class="media-date">12 July 2025</span>
-          <a href="#" class="media-link">Press Statement: Youth in Governance Initiative</a>
-        </li>
-        <li>
-          <span class="media-date">06 July 2025</span>
-          <a href="#" class="media-link">Speech: RAP’s Vision for Inclusive Economic Growth</a>
-        </li>
-        <li>
-          <span class="media-date">28 June 2025</span>
-          <a href="#" class="media-link">Interview: Founding Member on Party Strategy</a>
-        </li>
-      </ul>
+      <!-- Collapsible Leadership Sections -->
+      <section class="leadership-organs">
+        <h2>National Leadership Organs</h2>
 
-      <!-- <p class="note">[CMS Hook: Dynamic list of media releases to be populated here]</p> -->
+        <button class="collapsible">National Advisory Council (NAC)</button>
+        <div class="content-panel">
+          <p>Advises on strategic policy directions of RAP. Open to senior members with proven expertise.</p>
+        </div>
 
-      <!-- Hidden Admin Form -->
-      <div class="admin-form hidden">
-        <h3>Upload New Media Release</h3>
-        <form>
-          <input type="text" placeholder="Title" required>
-          <textarea placeholder="Description or link" required></textarea>
-          <button type="submit" class="btn-primary">Upload</button>
+        <button class="collapsible">RAP NEC and Support Committees</button>
+        <div class="content-panel">
+          <p>The National Executive Council manages day-to-day operations with assistance from specialized committees.</p>
+        </div>
+
+        <button class="collapsible">National Secretariat (NS)</button>
+        <div class="content-panel">
+          <p>The Secretariat handles administrative functions and coordination of party activities nationwide.</p>
+        </div>
+
+        <button class="collapsible">National Elections and Nominations Board (NENB)</button>
+        <div class="content-panel">
+          <p>Oversees internal elections and candidate nominations for RAP.</p>
+        </div>
+      </section>
+
+      <!-- Regional/County Structure -->
+      <section class="regional-structure">
+        <h2>Regional and County-Level Structures</h2>
+        <p>Select your electoral area to express interest in leadership roles at the local level:</p>
+
+        <form action="#" method="post">
+          <label for="county">Select County:</label>
+          <select id="county" name="county" required>
+            <option value="">-- Choose County --</option>
+            <option value="Nairobi">Nairobi</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Kisumu">Kisumu</option>
+            <!-- Placeholder: Add remaining 47 counties from database -->
+          </select>
+
+          <label for="subcounty">Select Sub-County/Constituency:</label>
+          <select id="subcounty" name="subcounty" required>
+            <option value="">-- Choose Sub-County --</option>
+          </select>
+
+          <label for="ward">Select Ward:</label>
+          <select id="ward" name="ward" required>
+            <option value="">-- Choose Ward --</option>
+          </select>
+
+          <label for="polling">Select Polling Centre:</label>
+          <select id="polling" name="polling" required>
+            <option value="">-- Choose Polling Centre --</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Submit Interest</button>
         </form>
-      </div>
+      </section>
     </div>
   </main>
 
@@ -349,7 +379,6 @@
 </script>
 
 <script src="scripts/accessibillityu.js"></script>
-
 </body>
 </html>
 

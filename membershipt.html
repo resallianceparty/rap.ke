@@ -11,6 +11,7 @@
 <body>
 
   <!-- Header -->
+  <!-- START HEADER -->
   <header class="header">
     <div class="container">
       <div class="logo-area">
@@ -73,7 +74,23 @@
             <a href="careers.html">Careers & Jobs</a>
           </div>
         </div>
-        <a href="get-involved.html">Get Involved</a>
+
+<div class="dropdown">
+  <a class="dropdown-toggle" aria-label="Get Involved Menu">Get Involved ▾</a>
+
+  <div class="dropdown-menu">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+        
         <!-- News & Publications Dropdown -->
         <div class="dropdown">
           <a class="dropdown-toggle">News & Publications ▾</a>
@@ -87,7 +104,7 @@
         </div>
 </div>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
 
       </nav>
 
@@ -149,7 +166,22 @@
     <a href="careers.html">Careers & Jobs</a>
   </div>
 </div>
-  <a href="get-involved.html">Get Involved</a>
+
+<div class="mobile-dropdown">
+ <button class="dropdown-btn" aria-label="Toggle Get Involved Menu">Get Involved ▾</button>
+  <div class="dropdown-content">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+
 <div class="mobile-dropdown">
   <button class="dropdown-btn">News & Publications ▾</button>
   <div class="dropdown-content">
@@ -164,6 +196,32 @@
 
   <a href="contact.html">Contact</a>
 </nav>
+
+  <div id="accessibilityPanel" class="accessibility-panel">
+  <h3>Accessibility</h3>
+
+  <div class="access-option">
+    <i class="fas fa-text-height"></i>
+    <button onclick="adjustFontSize('increase')">A+</button>
+    <button onclick="adjustFontSize('decrease')">A-</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-adjust"></i>
+    <button onclick="toggleContrast()">High Contrast</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-moon"></i>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+  <div class="access-option brightness-control">
+    <i class="fas fa-sun"></i>
+    <input type="range" id="brightnessSlider" min="50" max="150" value="100" />
+  </div>
+</div>
+
 
   </header>
 
@@ -202,11 +260,132 @@
         <h3>
             3.DECLARATION AND AFFIRMATION
         </h3>
+        <p>
+          By completing the registration process, you declare and affirm that:
+        </p>
+        <ul>
+            <li>You are joining RAP willingly, without coercion or inducement.</li>
+            <li>You have not misrepresented any information and understand that false declarations may lead to suspension or revocation of membership.</li>
+            <li>You commit to upholding the Constitution, ideology, policies, and values of the party.</li>
+            <li>You accept that RAP may use your membership information in accordance with applicable data protection laws.</li>
+        </ul>
+        <p>
+          This declaration is made in line with the Constitution of Kenya (2010), the Political Parties Act (2011), and RAP’s own Constitution and regulations.
+        </p>
         
+        <h3>
+           4.MEMBERSHIP RESPONSIBILITIES
+        </h3>
+        <p>
+          By joining RAP, you agree to:
+        </p>
+        <ul>
+            <li>Uphold the RAP Constitution, by-laws, and guiding principles.</li>
+            <li>Participate in party meetings, nominations, elections, outreach activities, and national programs.</li>
+            <li>Respect party leadership and contribute to implementation of party resolutions.</li>
+            <li>Maintain party unity, dignity, and cohesion in word and conduct.</li>
+            <li>Promote and defend RAP’s legitimate positions, leadership, and public image.</li>
+            <li>Voluntarily pay the prescribed membership and annual subscription fees.</li>
+            <li>Avoid conduct that may damage the party’s reputation or contradict its objectives.</li>
+        </ul>
+
+        <h3>
+          5.SPECIAL INTEREST CATEGORIES
+        </h3>
+        <p>
+          Members applying under any of the following special interest groups must provide verifiable documentation:
+        </p>
+        <ul>
+          <li>Persons with Disabilities (PWD): Valid NCPWD registration</li>
+          <li>Ethnic Minorities: Proof of recognized minority status</li>
+          <li>Marginalized Communities: Residence or origin from areas officially designated as marginalized</li>
+        </ul>
+
+<h3>6. Account and Communication</h3>
+<p>You are responsible for:</p>
+<ul>
+  <li>Maintaining confidentiality of your account credentials</li>
+  <li>Ensuring email or SMS verification and other identification steps are completed if requested</li>
+  <li>All activity carried out through your membership account</li>
+  <li>Promptly notifying the party’s National Secretariat of any unauthorized access or changes</li>
+</ul>
+<p>
+  By becoming a member, you consent to receive official communications, including SMS, email, or short code-based messages. 
+  Any associated costs may be determined periodically by relevant RAP party departments.
+</p>
+
+<h3>7. Data Protection and Privacy</h3>
+<p>RAP is committed to safeguarding your personal data in accordance with the Data Protection Act, 2019. 
+Your information will be used solely for party-related purposes and will be stored securely. You have the right to:</p>
+<ul>
+  <li>Access your data</li>
+  <li>Request corrections or updates</li>
+  <li>Withdraw your consent (subject to party regulations)</li>
+</ul>
+
+<h3>8. Membership Fees</h3>
+<p>
+  Where applicable, membership fees are payable annually. Non-payment may result in suspension or termination of membership. 
+  Fee structures will be communicated via official RAP channels.
+</p>
+
+<h3>9. Prohibited Activities</h3>
+<p>As a member, you agree not to:</p>
+<ul>
+  <li>Engage in hate speech, discrimination, or harassment</li>
+  <li>Use RAP platforms for unauthorized political, commercial, or unlawful activities</li>
+  <li>Misrepresent the party or use your membership for personal gain</li>
+  <li>Violate any applicable laws or the Political Parties Act</li>
+</ul>
+
+<h3>10. Conduct and Disciplinary Measures</h3>
+<p>You are expected to conduct yourself with integrity, respect, and loyalty to the party. RAP reserves the right to suspend or terminate membership in cases of:</p>
+<ul>
+  <li>False information</li>
+  <li>Misconduct</li>
+  <li>Breach of party rules or national laws</li>
+</ul>
+
+<h3>11. Termination of Membership</h3>
+<p>RAP reserves the right to suspend or terminate your membership if:</p>
+<ul>
+  <li>You violate these terms or party regulations</li>
+  <li>You submit false or misleading information</li>
+  <li>You are involved in prohibited or unlawful activities</li>
+  <li>Such action is required by law or the Political Parties Registrar</li>
+</ul>
+
+<h3>12. Disclaimer and Liability</h3>
+<ul>
+  <li>Membership in RAP does not guarantee political nomination, endorsement, or appointment.</li>
+  <li>RAP is not liable for any loss, damage, or claims arising from use of its website, social media, or digital platforms.</li>
+  <li>You agree to indemnify RAP and its officers against any claims resulting from your participation in party activities.</li>
+</ul>
+
+<h3>13. Amendments to Terms</h3>
+<p>
+  RAP reserves the right to revise or update these Terms and C
+</p>
+
+<h3>14. Legal Compliance</h3>
+<p>By registering, you agree to comply with:</p>
+<ul>
+  <li>The Constitution of Kenya (2010)</li>
+  <li>The Political Parties Act (2011)</li>
+  <li>The Elections Act (2011)</li>
+  <li>The RAP Party Constitution and related instruments</li>
+</ul>
+
+<h3>15. Contact</h3>
+<p>
+  For queries or assistance, please contact the RAP Party National Secretariat through our official website or 
+  <a href="mailto:info@rap.or.ke">info@rap.or.ke</a> or regional offices.
+</p>
     </div>
   </main>
 
 <!-- Footer -->
+<!-- START FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -224,14 +403,11 @@
     <div class="footer-section footer-quicklinks">
       <h3>Quick Links</h3>
       <ul>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
         <p><a href="ideology.html">Ideology</a></p>
         <p><a href="manifesto.html">Manifesto</a></p>
         <p><a href="resource-centre.html">Resource Centre</a></p>
         <p><a href="get-involved.html">Get Involved</a></p>
-        <p><a href="news.html">News & Publications</a></p>
-        <p><a href="contact.html">Contact</a></p>
+        <p><a href="latest-highlights.html">News & Publications</a></p>
       </ul>
     </div>
 
@@ -242,7 +418,8 @@
         <p><a href="privacy-policy.html">Privacy Policy</a></p>
         <p><a href="terms-of-use.html">Terms of Use</a></p>
         <p><a href="submission.html">Submission Terms</a></p>
-        <p><a href="membershipt.html">Membership conditions</a></p>
+        <p><a href="submission.html">Membership conditions</a></p>
+        <p><a href="faq.html">FAQ's</a></p>
       </ul>
     </div>
 
@@ -257,6 +434,13 @@
         <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
+
+      <!-- Copyright Line -->
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2025 Restoration Alliance Party (RAP). All Rights Reserved. 
+      Site crafted by <a href="https://otaimedia.com" target="_blank">OtaiMedia</a>.
+    </p>
 
   </div>
 </footer>
@@ -292,3 +476,4 @@
 
 </body>
 </html>
+

@@ -11,6 +11,7 @@
 <body>
 
   <!-- Header -->
+  <!-- START HEADER -->
   <header class="header">
     <div class="container">
       <div class="logo-area">
@@ -73,7 +74,23 @@
             <a href="careers.html">Careers & Jobs</a>
           </div>
         </div>
-        <a href="get-involved.html">Get Involved</a>
+
+<div class="dropdown">
+  <a class="dropdown-toggle" aria-label="Get Involved Menu">Get Involved ▾</a>
+
+  <div class="dropdown-menu">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+        
         <!-- News & Publications Dropdown -->
         <div class="dropdown">
           <a class="dropdown-toggle">News & Publications ▾</a>
@@ -87,7 +104,7 @@
         </div>
 </div>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">Contact Us</a>
 
       </nav>
 
@@ -149,7 +166,22 @@
     <a href="careers.html">Careers & Jobs</a>
   </div>
 </div>
-  <a href="get-involved.html">Get Involved</a>
+
+<div class="mobile-dropdown">
+ <button class="dropdown-btn" aria-label="Toggle Get Involved Menu">Get Involved ▾</button>
+  <div class="dropdown-content">
+    <a href="join.html">Join RAP</a>
+    <a href="resign-status.html">Resign / Check Status</a>
+    <a href="donate.html">Donate</a>
+    <a href="volunteer.html">Volunteer</a>
+    <a href="join-leadership.html">Join RAP Leadership</a>
+    <a href="join-league.html">Join RAP League</a>
+    <a href="apply-aspirant.html">Party Aspirants</a>
+    <a href="careers.html">Explore Careers</a>
+  </div>
+</div>
+
+
 <div class="mobile-dropdown">
   <button class="dropdown-btn">News & Publications ▾</button>
   <div class="dropdown-content">
@@ -165,51 +197,103 @@
   <a href="contact.html">Contact</a>
 </nav>
 
+  <div id="accessibilityPanel" class="accessibility-panel">
+  <h3>Accessibility</h3>
+
+  <div class="access-option">
+    <i class="fas fa-text-height"></i>
+    <button onclick="adjustFontSize('increase')">A+</button>
+    <button onclick="adjustFontSize('decrease')">A-</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-adjust"></i>
+    <button onclick="toggleContrast()">High Contrast</button>
+  </div>
+
+  <div class="access-option">
+    <i class="fas fa-moon"></i>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+  </div>
+
+  <div class="access-option brightness-control">
+    <i class="fas fa-sun"></i>
+    <input type="range" id="brightnessSlider" min="50" max="150" value="100" />
+  </div>
+</div>
+
+
   </header>
 
- <!-- Content -->
-  <main class="section">
-    <div class="content">
-      <h2>Public Notices</h2>
-      <p>Stay updated on important alerts, regulatory notices, and key announcements from RAP.</p>
+<!-- Content -->
+<main class="section">
+  <div class="content">
+    <h2>Public Notices</h2>
+    <p>Stay updated on important alerts, regulatory notices, and key announcements from RAP.</p>
 
-      <!-- Urgent Notice Banner -->
-      <div class="urgent-notice">
-        <i class="fas fa-exclamation-circle"></i>
-        <span>URGENT: Membership verification deadline extended to 30th September 2025.</span>
+    <!-- Urgent Notice Banner -->
+    <div class="urgent-notice">
+      <i class="fas fa-exclamation-circle"></i>
+      <span>URGENT: Membership verification deadline extended to 31st December 2025.</span>
+    </div>
+
+    <!-- Notices List -->
+    <div class="notices-list">
+      <div class="notice-card">
+        <h3>RAP Provisional Registration Notice</h3>
+        <p>This is the Office of the Registrar of Political Parties Provisional Registration Notice.</p>
+        <a href="assets/RAP_ORPP_PROVISIONAL_REGISTRATION_NOTICE.webp" download class="btn-download red">Download Notice</a>
       </div>
 
-      <!-- Notices List -->
-      <div class="notices-list">
-        <div class="notice-card">
-          <h3>ORPP Provisional Registration Notice</h3>
-          <p>This is the Office of the Regitrar of Political Parties Provisional Registration Notice.</p>
-          <a href="assets/RAP _ORPP PROVISIONAL REGISTRATION NOTICE.webp" download class="btn-download red">Download Notice</a>
-        </div>
-
-        <div class="notice-card">
-          <h3>ORPP Provisional Registration Notice</h3>
-          <p>This is the Office of the Regitrar of Political Parties Provisional Registration Notice (KISWAHILI).</p>
-          <a href="assets/RAP _ORPP PROVISIONAL REGISTRATION NOTICE(SWAHILI).webp" download class="btn-download red">Download Notice</a>
-        </div>
+      <div class="notice-card">
+        <h3>Taarifa ya Usajili wa Muda wa RAP</h3>
+        <p>This is the Office of the Registrar of Political Parties Provisional Registration Notice (KISWAHILI).</p>
+        <a href="assets/RAP_ORPP_PROVISIONAL_REGISTRATION_NOTICE(SWAHILI).webp" download class="btn-download red">Download Notice</a>
       </div>
 
-      <p class="note">[CMS Hook: Public Notices will be updated dynamically via database]</p>
+      <!-- Example image notice -->
+      <div class="notice-card">
+        <h3>Community Outreach Event</h3>
+        <img src="assets/sample-image.jpg" alt="Community Event" class="notice-media">
+        <p>Photos from our recent community outreach initiative.</p>
+      </div>
 
-      <!-- Hidden Admin Form -->
-      <div class="admin-form hidden">
-        <h3>Post New Public Notice</h3>
-        <form>
-          <input type="text" placeholder="Notice Title" required>
-          <textarea placeholder="Notice Details" required></textarea>
-          <input type="file" accept=".pdf" required>
-          <button type="submit" class="btn-primary">Upload Notice</button>
-        </form>
+      <!-- Example video notice -->
+      <div class="notice-card">
+        <h3>Chairperson's Address</h3>
+        <video controls class="notice-media">
+          <source src="assets/sample-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>Watch the latest address from the RAP Chairperson.</p>
       </div>
     </div>
-  </main>
+
+    <!-- Hidden Admin Form -->
+    <div class="admin-form hidden">
+      <h3>Post New Public Notice</h3>
+      <form>
+        <input type="text" placeholder="Notice Title" required>
+        <textarea placeholder="Notice Details" required></textarea>
+
+        <!-- File Uploads -->
+        <label>Attach Document (PDF)</label>
+        <input type="file" accept=".pdf">
+
+        <label>Upload Image</label>
+        <input type="file" accept="image/*">
+
+        <label>Upload Video</label>
+        <input type="file" accept="video/*">
+
+        <button type="submit" class="btn-primary">Upload Notice</button>
+      </form>
+    </div>
+  </div>
+</main>
 
 <!-- Footer -->
+<!-- START FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -227,14 +311,11 @@
     <div class="footer-section footer-quicklinks">
       <h3>Quick Links</h3>
       <ul>
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
         <p><a href="ideology.html">Ideology</a></p>
         <p><a href="manifesto.html">Manifesto</a></p>
         <p><a href="resource-centre.html">Resource Centre</a></p>
         <p><a href="get-involved.html">Get Involved</a></p>
-        <p><a href="news.html">News & Publications</a></p>
-        <p><a href="contact.html">Contact</a></p>
+        <p><a href="latest-highlights.html">News & Publications</a></p>
       </ul>
     </div>
 
@@ -246,6 +327,7 @@
         <p><a href="terms-of-use.html">Terms of Use</a></p>
         <p><a href="submission.html">Submission Terms</a></p>
         <p><a href="submission.html">Membership conditions</a></p>
+        <p><a href="faq.html">FAQ's</a></p>
       </ul>
     </div>
 
@@ -261,8 +343,28 @@
       </div>
     </div>
 
+      <!-- Copyright Line -->
+  <div class="footer-bottom">
+    <p>
+      Copyright © 2025 Restoration Alliance Party (RAP). All Rights Reserved. 
+      Site crafted by <a href="https://otaimedia.com" target="_blank">OtaiMedia</a>.
+    </p>
+
   </div>
 </footer>
+
+<script>
+// Future: Handle file previews
+document.querySelectorAll('.admin-form input[type="file"]').forEach(input => {
+  input.addEventListener('change', e => {
+    const file = e.target.files[0];
+    if(file) {
+      console.log("Selected file:", file.name); // Will replace with upload logic
+    }
+  });
+});
+</script>
+
 
   <script>
     function toggleMenu() {
@@ -295,3 +397,4 @@
 
 </body>
 </html>
+
